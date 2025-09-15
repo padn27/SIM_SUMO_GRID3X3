@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<additional>
+    
+    <inductionLoop id="det_n00_n01_0" lane="n00_n01_0" pos="50" freq="1" file="det_n00_n01_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n00_n01_1" lane="n00_n01_1" pos="50" freq="1" file="det_n00_n01_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n01_n00_0" lane="n01_n00_0" pos="50" freq="1" file="det_n01_n00_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n01_n00_1" lane="n01_n00_1" pos="50" freq="1" file="det_n01_n00_1.xml" color="255,105,180" />
+
+    <inductionLoop id="det_n01_n02_0" lane="n01_n02_0" pos="50" freq="1" file="det_n01_n02_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n01_n02_1" lane="n01_n02_1" pos="50" freq="1" file="det_n01_n02_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n02_n01_0" lane="n02_n01_0" pos="50" freq="1" file="det_n02_n01_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n02_n01_1" lane="n02_n01_1" pos="50" freq="1" file="det_n02_n01_1.xml" color="255,105,180" />
+
+    <inductionLoop id="det_n10_n11_0" lane="n10_n11_0" pos="50" freq="1" file="det_n10_n11_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n10_n11_1" lane="n10_n11_1" pos="50" freq="1" file="det_n10_n11_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n11_n10_0" lane="n11_n10_0" pos="50" freq="1" file="det_n11_n10_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n11_n10_1" lane="n11_n10_1" pos="50" freq="1" file="det_n11_n10_1.xml" color="255,105,180" />
+
+    <inductionLoop id="det_n11_n12_0" lane="n11_n12_0" pos="50" freq="1" file="det_n11_n12_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n11_n12_1" lane="n11_n12_1" pos="50" freq="1" file="det_n11_n12_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n12_n11_0" lane="n12_n11_0" pos="50" freq="1" file="det_n12_n11_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n12_n11_1" lane="n12_n11_1" pos="50" freq="1" file="det_n12_n11_1.xml" color="255,105,180" />
+
+    <inductionLoop id="det_n20_n21_0" lane="n20_n21_0" pos="50" freq="1" file="det_n20_n21_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n20_n21_1" lane="n20_n21_1" pos="50" freq="1" file="det_n20_n21_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n21_n20_0" lane="n21_n20_0" pos="50" freq="1" file="det_n21_n20_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n21_n20_1" lane="n21_n20_1" pos="50" freq="1" file="det_n21_n20_1.xml" color="255,105,180" />
+
+    <inductionLoop id="det_n21_n22_0" lane="n21_n22_0" pos="50" freq="1" file="det_n21_n22_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n21_n22_1" lane="n21_n22_1" pos="50" freq="1" file="det_n21_n22_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n22_n21_0" lane="n22_n21_0" pos="50" freq="1" file="det_n22_n21_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n22_n21_1" lane="n22_n21_1" pos="50" freq="1" file="det_n22_n21_1.xml" color="255,105,180" />
+
+    
+    <inductionLoop id="det_n00_n10_0" lane="n00_n10_0" pos="50" freq="1" file="det_n00_n10_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n00_n10_1" lane="n00_n10_1" pos="50" freq="1" file="det_n00_n10_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n10_n00_0" lane="n10_n00_0" pos="50" freq="1" file="det_n10_n00_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n10_n00_1" lane="n10_n00_1" pos="50" freq="1" file="det_n10_n00_1.xml" color="255,105,180" />
+
+    <inductionLoop id="det_n01_n11_0" lane="n01_n11_0" pos="50" freq="1" file="det_n01_n11_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n01_n11_1" lane="n01_n11_1" pos="50" freq="1" file="det_n01_n11_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n11_n01_0" lane="n11_n01_0" pos="50" freq="1" file="det_n11_n01_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n11_n01_1" lane="n11_n01_1" pos="50" freq="1" file="det_n11_n01_1.xml" color="255,105,180" />
+
+    <inductionLoop id="det_n02_n12_0" lane="n02_n12_0" pos="50" freq="1" file="det_n02_n12_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n02_n12_1" lane="n02_n12_1" pos="50" freq="1" file="det_n02_n12_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n12_n02_0" lane="n12_n02_0" pos="50" freq="1" file="det_n12_n02_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n12_n02_1" lane="n12_n02_1" pos="50" freq="1" file="det_n12_n02_1.xml" color="255,105,180" />
+
+    <inductionLoop id="det_n10_n20_0" lane="n10_n20_0" pos="50" freq="1" file="det_n10_n20_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n10_n20_1" lane="n10_n20_1" pos="50" freq="1" file="det_n10_n20_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n20_n10_0" lane="n20_n10_0" pos="50" freq="1" file="det_n20_n10_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n20_n10_1" lane="n20_n10_1" pos="50" freq="1" file="det_n20_n10_1.xml" color="255,105,180" />
+
+    <inductionLoop id="det_n11_n21_0" lane="n11_n21_0" pos="50" freq="1" file="det_n11_n21_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n11_n21_1" lane="n11_n21_1" pos="50" freq="1" file="det_n11_n21_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n21_n11_0" lane="n21_n11_0" pos="50" freq="1" file="det_n21_n11_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n21_n11_1" lane="n21_n11_1" pos="50" freq="1" file="det_n21_n11_1.xml" color="255,105,180" />
+
+    <inductionLoop id="det_n12_n22_0" lane="n12_n22_0" pos="50" freq="1" file="det_n12_n22_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n12_n22_1" lane="n12_n22_1" pos="50" freq="1" file="det_n12_n22_1.xml" color="255,105,180" />
+    <inductionLoop id="det_n22_n12_0" lane="n22_n12_0" pos="50" freq="1" file="det_n22_n12_0.xml" color="255,105,180" />
+    <inductionLoop id="det_n22_n12_1" lane="n22_n12_1" pos="50" freq="1" file="det_n22_n12_1.xml" color="255,105,180" />
+</additional>

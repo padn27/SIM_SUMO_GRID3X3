@@ -1,0 +1,36 @@
+<routes>
+    <!-- Tipos de veículos -->
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" maxSpeed="13.9"/>
+    <vType id="bus" accel="1.5" decel="3.0" sigma="0.5" length="12" maxSpeed="12.0"/>
+
+    <!-- Rotas horizontais -->
+    <route id="r_n00_n01_n02" edges="n00_n01 n01_n02"/>
+    <route id="r_n02_n01_n00" edges="n02_n01 n01_n00"/>
+    <route id="r_n10_n11_n12" edges="n10_n11 n11_n12"/>
+    <route id="r_n12_n11_n10" edges="n12_n11 n11_n10"/>
+    <route id="r_n20_n21_n22" edges="n20_n21 n21_n22"/>
+    <route id="r_n22_n21_n20" edges="n22_n21 n21_n20"/>
+
+    <!-- Rotas verticais -->
+    <route id="r_n00_n10_n20" edges="n00_n10 n10_n20"/>
+    <route id="r_n20_n10_n00" edges="n20_n10 n10_n00"/>
+    <route id="r_n01_n11_n21" edges="n01_n11 n11_n21"/>
+    <route id="r_n21_n11_n01" edges="n21_n11 n11_n01"/>
+    <route id="r_n02_n12_n22" edges="n02_n12 n12_n22"/>
+    <route id="r_n22_n12_n02" edges="n22_n12 n12_n02"/>
+
+    <!-- Fluxos de carros -->
+    <flow id="flow_cars_1" type="car" begin="0" end="3600" from="n00_n01" to="n22_n12" vehsPerHour="250"/>
+    <flow id="flow_cars_2" type="car" begin="0" end="3600" from="n02_n12" to="n20_n10" vehsPerHour="200"/>
+    <flow id="flow_cars_3" type="car" begin="0" end="3600" from="n20_n10" to="n02_n12" vehsPerHour="250"/>
+    <flow id="flow_cars_4" type="car" begin="0" end="3600" from="n22_n12" to="n00_n01" vehsPerHour="200"/>
+    <flow id="flow_cars_5" type="car" begin="0" end="3600" from="n10_n11" to="n11_n12" vehsPerHour="250"/>
+
+
+    <!-- Fluxos de ônibus (preferência na faixa da esquerda) -->
+    <flow id="flow_bus_1" type="bus" begin="0" end="3600" from="n00_n01" to="n22_n12" vehsPerHour="200" departLane="0"/>
+    <flow id="flow_bus_2" type="bus" begin="0" end="3600" from="n20_n10" to="n02_n12" vehsPerHour="300" departLane="0"/>
+    <flow id="flow_bus_3" type="bus" begin="0" end="3600" from="n10_n11" to="n21_n22" vehsPerHour="200" departLane="0"/>
+    <flow id="flow_bus_4" type="bus" begin="0" end="3600" from="n20_n21" to="n01_n02" vehsPerHour="300" departLane="0"/>
+</routes>
+

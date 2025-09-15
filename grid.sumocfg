@@ -1,0 +1,32 @@
+<configuration>
+<input>
+    <!-- Arquivo de rede -->
+    <net-file value="grid.net.xml"/>
+    <!-- Arquivo de rotas e fluxos -->
+    <route-files value="grid.rou.xml"/>
+    <!-- Arquivo adicional (detectores, TLS adaptativo corrigido) -->
+    <additional-files value="grid.add.xml"/>
+</input>
+
+    <time>
+        <!-- Tempo inicial e final da simulação -->
+        <begin value="0"/>
+        <end value="3600"/>
+        <!-- Intervalo de passo da simulação (1 segundo) -->
+        <step-length value="1"/>
+    </time>
+
+    <report>
+        <!-- Ativa logs detalhados -->
+        <verbose value="true"/>
+        <!-- Evita log por passo (mais leve) -->
+        <no-step-log value="true"/>
+    </report>
+
+    <gui_only>
+        <!-- Garante que a simulação abra na GUI se estiver usando SUMO-GUI -->
+        <start value="true"/>
+    </gui_only>
+</configuration>
+
+
