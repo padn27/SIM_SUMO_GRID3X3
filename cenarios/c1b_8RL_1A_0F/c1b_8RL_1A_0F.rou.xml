@@ -1,0 +1,9 @@
+<routes>
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5.0" maxSpeed="70"/>
+    <vType id="bus" accel="1.5" decel="3.5" sigma="0.5" length="12.0" maxSpeed="50"/>
+
+    <flow id="n12_car_0" type="car" from="n02_n12" to="n22_n12" vehsPerHour="65" />
+    <flow id="n12_bus_0" type="bus" from="n02_n12" to="n22_n12" vehsPerHour="7" />
+    <flow id="n01_car_1" type="car" from="n00_n01" to="n11_n01" vehsPerHour="65" />
+    <flow id="n01_bus_1" type="bus" from="n00_n01" to="n11_n01" vehsPerHour="6" />
+</routes>
