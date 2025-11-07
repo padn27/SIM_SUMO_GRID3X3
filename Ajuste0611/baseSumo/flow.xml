@@ -1,0 +1,18 @@
+<additional>
+    <flow id="N_S" from="n01_n11" to="n11_n21" begin="0" end="3600" number="200"/> 
+    <flow id="N_O" from="n01_n11" to="n11_n10" begin="0" end="3600" number="150"/> 
+    <flow id="N_L" from="n01_n11" to="n11_n12" begin="0" end="3600" number="150"/> 
+
+    <flow id="S_N" from="n21_n11" to="n11_n01" begin="0" end="3600" number="200"/> 
+    <flow id="S_O" from="n21_n11" to="n11_n10" begin="0" end="3600" number="150"/> 
+    <flow id="S_L" from="n21_n11" to="n11_n12" begin="0" end="3600" number="150"/> 
+
+    <flow id="L_O" from="n12_n11" to="n11_n10" begin="0" end="3600" number="200"/> 
+    <flow id="L_N" from="n12_n11" to="n11_n01" begin="0" end="3600" number="150"/> 
+    <flow id="L_S" from="n12_n11" to="n11_n21" begin="0" end="3600" number="150"/> 
+
+    <flow id="O_L" from="n10_n11" to="n11_n12" begin="0" end="3600" number="200"/> 
+    <flow id="O_N" from="n10_n11" to="n11_n01" begin="0" end="3600" number="150"/> 
+    <flow id="O_S" from="n10_n11" to="n11_n21" begin="0" end="3600" number="150"/> 
+</additional>
+

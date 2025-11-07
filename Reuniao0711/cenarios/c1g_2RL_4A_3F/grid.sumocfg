@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+<input>
+    
+    <net-file value="grid.net.xml" />
+    
+    <additional-files value="grid.add.xml" />
+<route-files value="c1g_2RL_4A_3F.rou.xml" /></input>
+
+    <time>
+        
+        <begin value="0" />
+        <end value="3600" />
+        
+        <step-length value="1" />
+    </time>
+
+    <report>
+        
+        <verbose value="true" />
+        
+        <no-step-log value="true" />
+    </report>
+
+    <gui_only>
+        
+        <start value="true" />
+    </gui_only>
+<output><tripinfo-output value="tripinfo.xml" /></output></configuration>

@@ -1,0 +1,21 @@
+<routes>
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5.0" maxSpeed="70"/>
+    <vType id="bus" accel="1.5" decel="3.5" sigma="0.5" length="12.0" maxSpeed="50"/>
+
+    <flow id="n12_car_0" type="car" from="n02_n12" to="n22_n12" vehsPerHour="67" />
+    <flow id="n12_bus_0" type="bus" from="n02_n12" to="n22_n12" vehsPerHour="7" />
+    <flow id="n00_car_1" type="car" from="n01_n00" to="n10_n00" vehsPerHour="67" />
+    <flow id="n00_bus_1" type="bus" from="n01_n00" to="n10_n00" vehsPerHour="7" />
+    <flow id="n01_car_2" type="car" from="n00_n01" to="n11_n01" vehsPerHour="67" />
+    <flow id="n01_bus_2" type="bus" from="n00_n01" to="n11_n01" vehsPerHour="7" />
+    <flow id="n02_car_3" type="car" from="n01_n02" to="n12_n02" vehsPerHour="66" />
+    <flow id="n02_bus_3" type="bus" from="n01_n02" to="n12_n02" vehsPerHour="7" />
+    <flow id="n10_car_4" type="car" from="n00_n10" to="n20_n10" vehsPerHour="66" />
+    <flow id="n10_bus_4" type="bus" from="n00_n10" to="n20_n10" vehsPerHour="7" />
+    <flow id="n11_car_5" type="car" from="n01_n11" to="n21_n11" vehsPerHour="66" />
+    <flow id="n11_bus_5" type="bus" from="n01_n11" to="n21_n11" vehsPerHour="6" />
+    <flow id="n20_car_6" type="car" from="n10_n20" to="n21_n20" vehsPerHour="66" />
+    <flow id="n20_bus_6" type="bus" from="n10_n20" to="n21_n20" vehsPerHour="6" />
+    <flow id="n21_car_7" type="car" from="n11_n21" to="n22_n21" vehsPerHour="66" />
+    <flow id="n21_bus_7" type="bus" from="n11_n21" to="n22_n21" vehsPerHour="6" />
+</routes>
