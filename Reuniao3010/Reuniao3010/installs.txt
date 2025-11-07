@@ -1,4 +1,0 @@
-pip install sumo-rl
-pip install "stable_baselines3[extra]>=2.0.0a9"
-
-python3 treinar_dqn_sumorl --validacao --nomecenario "" --episodios ""
