@@ -1,0 +1,115 @@
+<routes>
+    <!-- Tipos de veículos -->
+    <vType id="car" accel="2.1" decel="3.5" sigma="0.5" length="5" maxSpeed="11.1"/>
+    <vType id="bus" accel="1.2" decel="2.0" sigma="0.5" length="12" maxSpeed="10.0"/>
+
+    <!-- Rotas longas circulares -->
+    <route id="r_long_cw" edges="n10_n00 n00_n01 n01_n11 n11_n12 n12_n22 n22_n21 n21_n20 n20_n10"/>
+    <flow id="f_long_cw" type="car" begin="0" end="36000" route="r_long_cw" vehsPerHour="100" departPos="random" departLane="best"/>
+
+    <route id="r_long_ccw" edges="n10_n20 n20_n21 n21_n22 n22_n12 n12_n11 n11_n01 n01_n00 n00_n10"/>
+    <flow id="f_long_ccw" type="car" begin="0" end="36000" route="r_long_ccw" vehsPerHour="100" departPos="random" departLane="best"/>
+
+    <!-- Rotas diagonais curtas -->
+    <route id="r_diag_n10_n01" edges="n10_n11 n11_n01"/>
+    <flow id="f_diag_n10_n01" type="car" begin="0" end="36000" route="r_diag_n10_n01" vehsPerHour="50" departPos="random" departLane="best"/>
+
+    <route id="r_diag_n12_n21" edges="n12_n11 n11_n21"/>
+    <flow id="f_diag_n12_n21" type="car" begin="0" end="36000" route="r_diag_n12_n21" vehsPerHour="50" departPos="random" departLane="best"/>
+
+    <route id="r_diag_n01_n12" edges="n01_n11 n11_n12"/>
+    <flow id="f_diag_n01_n12" type="car" begin="0" end="36000" route="r_diag_n01_n12" vehsPerHour="50" departPos="random" departLane="best"/>
+
+    <route id="r_diag_n11_n02" edges="n11_n12 n12_n02"/>
+    <flow id="f_diag_n11_n02" type="car" begin="0" end="36000" route="r_diag_n11_n02" vehsPerHour="50" departPos="random" departLane="best"/>
+
+    <route id="r_diag_n22_n02" edges="n22_n12 n12_n02"/>
+    <flow id="f_diag_n22_n02" type="car" begin="0" end="36000" route="r_diag_n22_n02" vehsPerHour="50" departPos="random" departLane="best"/>
+
+    <route id="r_diag_n02_n11" edges="n02_n12 n12_n11"/>
+    <flow id="f_diag_n02_n11" type="car" begin="0" end="36000" route="r_diag_n02_n11" vehsPerHour="50" departPos="random" departLane="best"/>
+
+    <route id="r_diag_n12_n21b" edges="n12_n22 n22_n21"/>
+    <flow id="f_diag_n12_n21b" type="car" begin="0" end="36000" route="r_diag_n12_n21b" vehsPerHour="50" departPos="random" departLane="best"/>
+
+    <!-- Rotas múltiplos cruzamentos (novas adicionadas) -->
+    <!-- 1) n12 → n02 → n01 → n00 → n10 → n20 -->
+    <route id="r_n12_to_n20" edges="n12_n02 n02_n01 n01_n00 n00_n10 n10_n20"/>
+    <flow id="f_n12_n20" type="car" begin="0" end="36000" route="r_n12_to_n20" vehsPerHour="100" departPos="random" departLane="best"/>
+    <route id="r_n20_to_n12" edges="n20_n10 n10_n00 n00_n01 n01_n02 n02_n12"/>
+    <flow id="f_n20_n12" type="car" begin="0" end="36000" route="r_n20_to_n12" vehsPerHour="100" departPos="random" departLane="best"/>
+
+    <!-- 2) n01 → n11 → n21 → n20 → n10 → n00 -->
+    <route id="r_n01_to_n00" edges="n01_n11 n11_n21 n21_n20 n20_n10 n10_n00"/>
+    <flow id="f_n01_n00" type="car" begin="0" end="36000" route="r_n01_to_n00" vehsPerHour="100" departPos="random" departLane="best"/>
+    <route id="r_n00_to_n01" edges="n00_n10 n10_n20 n20_n21 n21_n11 n11_n01"/>
+    <flow id="f_n00_n01" type="car" begin="0" end="36000" route="r_n00_to_n01" vehsPerHour="100" departPos="random" departLane="best"/>
+
+    <!-- 3) n00 → n10 → n20 → n21 → n22 → n12 -->
+    <route id="r_n00_to_n12" edges="n00_n10 n10_n20 n20_n21 n21_n22 n22_n12"/>
+    <flow id="f_n00_n12" type="car" begin="0" end="36000" route="r_n00_to_n12" vehsPerHour="100" departPos="random" departLane="best"/>
+    <route id="r_n12_to_n00" edges="n12_n22 n22_n21 n21_n20 n20_n10 n10_n00"/>
+    <flow id="f_n12_n00" type="car" begin="0" end="36000" route="r_n12_to_n00" vehsPerHour="100" departPos="random" departLane="best"/>
+
+    <!-- 4) n00 → n01 → n02 → n12 → n22 → n21 -->
+    <route id="r_n00_to_n21" edges="n00_n01 n01_n02 n02_n12 n12_n22 n22_n21"/>
+    <flow id="f_n00_n21" type="car" begin="0" end="36000" route="r_n00_to_n21" vehsPerHour="100" departPos="random" departLane="best"/>
+    <route id="r_n21_to_n00" edges="n21_n22 n22_n12 n12_n02 n02_n01 n01_n00"/>
+    <flow id="f_n21_n00" type="car" begin="0" end="36000" route="r_n21_to_n00" vehsPerHour="100" departPos="random" departLane="best"/>
+
+    <!-- rota complexa reversa corrigida -->
+    <route id="r_complex_a_rev2" edges="n00_n10 n10_n20 n20_n21 n21_n22 n22_n12 n12_n02 n02_n01 n01_n11 n11_n21 n21_n20 n20_n10"/>
+    <flow id="f_complex_a_rev2" type="car" begin="0" end="36000" route="r_complex_a_rev2" vehsPerHour="100" departPos="random" departLane="best"/>
+
+
+<!-- Novas rotas solicitadas -->
+
+<!-- 1) n10 → n11 → n21 e reversa -->
+<route id="r_n10_n21" edges="n10_n11 n11_n21"/>
+<flow id="f_n10_n21" type="car" begin="0" end="36000" route="r_n10_n21" vehsPerHour="50" departPos="random" departLane="best"/>
+<route id="r_n21_n10" edges="n21_n11 n11_n10"/>
+<flow id="f_n21_n10" type="car" begin="0" end="36000" route="r_n21_n10" vehsPerHour="50" departPos="random" departLane="best"/>
+
+<!-- 2) n00 → n10 → n11 → n12 e reversa -->
+<route id="r_n00_n12_via_n10_n11" edges="n00_n10 n10_n11 n11_n12"/>
+<flow id="f_n00_n12_via_n10_n11" type="car" begin="0" end="36000" route="r_n00_n12_via_n10_n11" vehsPerHour="50" departPos="random" departLane="best"/>
+<route id="r_n12_n00_via_n11_n10" edges="n12_n11 n11_n10 n10_n00"/>
+<flow id="f_n12_n00_via_n11_n10" type="car" begin="0" end="36000" route="r_n12_n00_via_n11_n10" vehsPerHour="50" departPos="random" departLane="best"/>
+
+<!-- 3) n20 → n10 → n11 → n21 e reversa -->
+<route id="r_n20_n21_via_n10_n11" edges="n20_n10 n10_n11 n11_n21"/>
+<flow id="f_n20_n21_via_n10_n11" type="car" begin="0" end="36000" route="r_n20_n21_via_n10_n11" vehsPerHour="50" departPos="random" departLane="best"/>
+<route id="r_n21_n20_via_n11_n10" edges="n21_n11 n11_n10 n10_n20"/>
+<flow id="f_n21_n20_via_n11_n10" type="car" begin="0" end="36000" route="r_n21_n20_via_n11_n10" vehsPerHour="50" departPos="random" departLane="best"/>
+
+<!-- 4) n11 → n01 → n02 → n12 e reversa -->
+<route id="r_n11_n12_via_n01_n02" edges="n11_n01 n01_n02 n02_n12"/>
+<flow id="f_n11_n12_via_n01_n02" type="car" begin="0" end="36000" route="r_n11_n12_via_n01_n02" vehsPerHour="50" departPos="random" departLane="best"/>
+<route id="r_n12_n11_via_n02_n01" edges="n12_n02 n02_n01 n01_n11"/>
+<flow id="f_n12_n11_via_n02_n01" type="car" begin="0" end="36000" route="r_n12_n11_via_n02_n01" vehsPerHour="50" departPos="random" departLane="best"/>
+
+<!-- 5) n11 → n21 → n20 → n10 → n11 e reversa -->
+<route id="r_n11_loop_via_n21_n20_n10" edges="n11_n21 n21_n20 n20_n10 n10_n11"/>
+<flow id="f_n11_loop_via_n21_n20_n10" type="car" begin="0" end="36000" route="r_n11_loop_via_n21_n20_n10" vehsPerHour="50" departPos="random" departLane="best"/>
+<route id="r_n11_loop_rev_via_n10_n20_n21" edges="n11_n10 n10_n20 n20_n21 n21_n11"/>
+<flow id="f_n11_loop_rev_via_n10_n20_n21" type="car" begin="0" end="36000" route="r_n11_loop_rev_via_n10_n20_n21" vehsPerHour="50" departPos="random" departLane="best"/>
+
+<!-- 6) n12 → n11 → n10 e reversa -->
+<route id="r_n12_n10_via_n11" edges="n12_n11 n11_n10"/>
+<flow id="f_n12_n10_via_n11" type="car" begin="0" end="36000" route="r_n12_n10_via_n11" vehsPerHour="50" departPos="random" departLane="best"/>
+<route id="r_n10_n12_via_n11" edges="n10_n11 n11_n12"/>
+<flow id="f_n10_n12_via_n11" type="car" begin="0" end="36000" route="r_n10_n12_via_n11" vehsPerHour="50" departPos="random" departLane="best"/>
+
+
+
+<!-- Ônibus -->
+<flow id="f_bus_1" type="bus" begin="0" end="36000" from="n00_n01" to="n01_n02" vehsPerHour="100" departPos="random" departLane="0"/>
+<flow id="f_bus_2" type="bus" begin="0" end="36000" from="n10_n11" to="n11_n12" vehsPerHour="100" departPos="random" departLane="0"/>
+<flow id="f_bus_3" type="bus" begin="0" end="36000" from="n21_n11" to="n11_n01" vehsPerHour="100" departPos="random" departLane="0"/>
+<flow id="f_bus_4" type="bus" begin="0" end="36000" from="n02_n12" to="n12_n22" vehsPerHour="100" departPos="random" departLane="0"/>
+
+<!-- Novas rotas de ônibus -->
+<flow id="f_bus_5" type="bus" begin="0" end="36000" from="n21_n11" to="n11_n12" vehsPerHour="100" departPos="random" departLane="0"/>
+<flow id="f_bus_6" type="bus" begin="0" end="36000" from="n01_n11" to="n11_n10" vehsPerHour="100" departPos="random" departLane="0"/>
+</routes>
+
