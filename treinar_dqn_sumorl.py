@@ -122,9 +122,9 @@ if __name__ == "__main__":
     parser.add_argument("--episodios", type=int, default=100, help="número de episódios")
     parser.add_argument("--rotasdir", type=str, default="rotas_jtr", help="diretório das rotas geradas (.rou.xml)")
     parser.add_argument("--troca", type=int, default=10, help="trocar rota a cada N episódios")
-    parser.add_argument("--net", type=str, default="sumoBase/grid.net.xml", help="arquivo .net.xml base")
-    parser.add_argument("--add", type=str, default="sumoBase/grid.add.xml", help="arquivo .add.xml base")
-    parser.add_argument("--tls", type=str, default="sumoBase/tls_config.json", help="arquivo JSON de configuração dos semáforos")
+    parser.add_argument("--net", type=str, default="baseSumo/grid.net.xml", help="arquivo .net.xml base")
+    parser.add_argument("--add", type=str, default="baseSumo/grid.add.xml", help="arquivo .add.xml base")
+    parser.add_argument("--tls", type=str, default="baseSumo/tls_config.json", help="arquivo JSON de configuração dos semáforos")
 
     args = parser.parse_args()
     USE_GUI = args.validacao
@@ -191,7 +191,7 @@ if __name__ == "__main__":
                 use_gui=USE_GUI,
                 num_seconds=3600,
                 delta_time=10,
-                reward_fn='diff-waiting-time'
+                reward_fn=minha_recompensa
             )
 
         observations, infos = env.reset()
