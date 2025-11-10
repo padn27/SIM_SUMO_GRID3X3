@@ -84,7 +84,7 @@ python3 treinar_dqn_sumorl.py --validacao --episodios 8100 --rotasdir rotas_jtr 
 
 ---
 
-## ⚙️ Configurações da Simulação
+## Configurações da Simulação
 
 O ambiente é criado no código `treinar_dqn_sumorl.py` com a seguinte estrutura:
 
