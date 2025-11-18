@@ -191,7 +191,7 @@ if __name__ == "__main__":
                 use_gui=USE_GUI,
                 num_seconds=3600,
                 delta_time=10,
-                reward_fn=minha_recompensa
+                reward_fn='diff-waiting-time'
             )
 
         observations, infos = env.reset()
@@ -243,4 +243,3 @@ if __name__ == "__main__":
     env.close()
     print("finalizado")
     plot_recompensas_multiplos_agentes(recompensas_episodios, window=10, save_path="recompensa_multiplos.png")
-

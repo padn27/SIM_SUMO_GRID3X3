@@ -18,7 +18,7 @@ os.makedirs(OUT_DIR, exist_ok=True)
 ORIG_INS  = ["n01_n11", "n21_n11", "n10_n11", "n12_n11"]
 DEST_OUTS = ["n11_n01", "n11_n21", "n11_n10", "n11_n12"]
 
-LEVEL_TO_NUM = {0: 0, 1: 150, 2: 200, 3: 300}
+LEVEL_TO_NUM = {0: 0, 1: 60, 2: 120, 3: 240}
 
 DISTRIB = {
     "n01_n11": [0.05, 0.80, 0.10, 0.05],  # NS

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-11-17 04:41:54 by Eclipse SUMO jtrrouter Version 1.18.0
+<!-- generated on 2025-11-17 04:41:52 by Eclipse SUMO jtrrouter Version 1.18.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/jtrrouterConfiguration.xsd">
 
     <input>
         <net-file value="baseSumo/grid.net.xml"/>
-        <route-files value="rotas_jtr/flows_NS3_SN3_LO3_OL3.xml"/>
+        <route-files value="rotas_jtr/flows_NS3_SN2_LO1_OL3.xml"/>
     </input>
 
     <output>
-        <output-file value="rotas_jtr/routes_NS3_SN3_LO3_OL3.rou.xml"/>
+        <output-file value="rotas_jtr/routes_NS3_SN2_LO1_OL3.rou.xml"/>
     </output>
 
     <random_number>
-        <seed value="122"/>
+        <seed value="107"/>
     </random_number>
 
 </configuration>
@@ -100,22 +100,16 @@
     <vehicle id="NS_1_car.1" type="car" depart="18.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.1" type="bus" depart="18.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.1" type="car" depart="18.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.2" type="bus" depart="37.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.2" type="car" depart="37.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.2" type="bus" depart="37.50">
+    <vehicle id="SN_0_bus.1" type="bus" depart="37.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.2" type="car" depart="37.50">
+    <vehicle id="SN_0_car.1" type="car" depart="37.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.3" type="bus" depart="56.25">
@@ -123,24 +117,6 @@
     </vehicle>
     <vehicle id="NS_1_car.3" type="car" depart="56.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.3" type="bus" depart="56.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.3" type="car" depart="56.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.1" type="bus" depart="60.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.1" type="car" depart="60.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.1" type="bus" depart="75.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.1" type="car" depart="75.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.4" type="bus" depart="75.00">
         <route edges="n01_n11 n11_n21"/>
@@ -154,10 +130,10 @@
     <vehicle id="OL_3_car.1" type="car" depart="75.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.4" type="bus" depart="75.00">
+    <vehicle id="SN_0_bus.2" type="bus" depart="75.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.4" type="car" depart="75.00">
+    <vehicle id="SN_0_car.2" type="car" depart="75.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.5" type="bus" depart="93.75">
@@ -166,53 +142,23 @@
     <vehicle id="NS_1_car.5" type="car" depart="93.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.5" type="bus" depart="93.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.5" type="car" depart="93.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.6" type="bus" depart="112.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.6" type="car" depart="112.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.6" type="bus" depart="112.50">
+    <vehicle id="SN_0_bus.3" type="bus" depart="112.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.6" type="car" depart="112.50">
+    <vehicle id="SN_0_car.3" type="car" depart="112.50">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.2" type="bus" depart="120.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.2" type="car" depart="120.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.7" type="bus" depart="131.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.7" type="car" depart="131.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.7" type="bus" depart="131.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.7" type="car" depart="131.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.1" type="bus" depart="150.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.1" type="car" depart="150.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.2" type="bus" depart="150.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.2" type="car" depart="150.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.8" type="bus" depart="150.00">
         <route edges="n01_n11 n11_n21"/>
@@ -244,17 +190,11 @@
     <vehicle id="OL_3_car.2" type="car" depart="150.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.8" type="bus" depart="150.00">
+    <vehicle id="SN_0_bus.4" type="bus" depart="150.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.8" type="car" depart="150.00">
+    <vehicle id="SN_0_car.4" type="car" depart="150.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.1" type="bus" depart="150.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.1" type="car" depart="150.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.9" type="bus" depart="168.75">
         <route edges="n01_n11 n11_n21"/>
@@ -262,28 +202,16 @@
     <vehicle id="NS_1_car.9" type="car" depart="168.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.9" type="bus" depart="168.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.9" type="car" depart="168.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.3" type="bus" depart="180.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.3" type="car" depart="180.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
     <vehicle id="NS_1_bus.10" type="bus" depart="187.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.10" type="car" depart="187.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.10" type="bus" depart="187.50">
+    <vehicle id="SN_0_bus.5" type="bus" depart="187.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.10" type="car" depart="187.50">
+    <vehicle id="SN_0_car.5" type="car" depart="187.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.11" type="bus" depart="206.25">
@@ -291,18 +219,6 @@
     </vehicle>
     <vehicle id="NS_1_car.11" type="car" depart="206.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.11" type="bus" depart="206.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.11" type="car" depart="206.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.3" type="bus" depart="225.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.3" type="car" depart="225.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.12" type="bus" depart="225.00">
         <route edges="n01_n11 n11_n21"/>
@@ -316,16 +232,16 @@
     <vehicle id="OL_3_car.3" type="car" depart="225.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.12" type="bus" depart="225.00">
+    <vehicle id="SN_0_bus.6" type="bus" depart="225.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.12" type="car" depart="225.00">
+    <vehicle id="SN_0_car.6" type="car" depart="225.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_2_bus.4" type="bus" depart="240.00">
+    <vehicle id="LO_2_bus.1" type="bus" depart="240.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.4" type="car" depart="240.00">
+    <vehicle id="LO_2_car.1" type="car" depart="240.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.13" type="bus" depart="243.75">
@@ -334,22 +250,16 @@
     <vehicle id="NS_1_car.13" type="car" depart="243.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.13" type="bus" depart="243.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.13" type="car" depart="243.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.14" type="bus" depart="262.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.14" type="car" depart="262.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.14" type="bus" depart="262.50">
+    <vehicle id="SN_0_bus.7" type="bus" depart="262.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.14" type="car" depart="262.50">
+    <vehicle id="SN_0_car.7" type="car" depart="262.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.15" type="bus" depart="281.25">
@@ -358,29 +268,11 @@
     <vehicle id="NS_1_car.15" type="car" depart="281.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.15" type="bus" depart="281.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.15" type="car" depart="281.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.2" type="bus" depart="300.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.2" type="car" depart="300.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.4" type="bus" depart="300.00">
+    <vehicle id="LO_1_bus.1" type="bus" depart="300.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.4" type="car" depart="300.00">
+    <vehicle id="LO_1_car.1" type="car" depart="300.00">
         <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.5" type="bus" depart="300.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.5" type="car" depart="300.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.16" type="bus" depart="300.00">
         <route edges="n01_n11 n11_n21"/>
@@ -418,22 +310,16 @@
     <vehicle id="OL_3_car.4" type="car" depart="300.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.16" type="bus" depart="300.00">
+    <vehicle id="SN_0_bus.8" type="bus" depart="300.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.16" type="car" depart="300.00">
+    <vehicle id="SN_0_car.8" type="car" depart="300.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.1" type="bus" depart="300.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_2_car.1" type="car" depart="300.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.2" type="bus" depart="300.00">
+    <vehicle id="SN_3_bus.1" type="bus" depart="300.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.2" type="car" depart="300.00">
+    <vehicle id="SN_3_car.1" type="car" depart="300.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.17" type="bus" depart="318.75">
@@ -442,22 +328,16 @@
     <vehicle id="NS_1_car.17" type="car" depart="318.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.17" type="bus" depart="318.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.17" type="car" depart="318.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.18" type="bus" depart="337.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.18" type="car" depart="337.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.18" type="bus" depart="337.50">
+    <vehicle id="SN_0_bus.9" type="bus" depart="337.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.18" type="car" depart="337.50">
+    <vehicle id="SN_0_car.9" type="car" depart="337.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.19" type="bus" depart="356.25">
@@ -465,24 +345,6 @@
     </vehicle>
     <vehicle id="NS_1_car.19" type="car" depart="356.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.19" type="bus" depart="356.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.19" type="car" depart="356.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.6" type="bus" depart="360.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.6" type="car" depart="360.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.5" type="bus" depart="375.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.5" type="car" depart="375.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.20" type="bus" depart="375.00">
         <route edges="n01_n11 n11_n21"/>
@@ -496,10 +358,10 @@
     <vehicle id="OL_3_car.5" type="car" depart="375.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.20" type="bus" depart="375.00">
+    <vehicle id="SN_0_bus.10" type="bus" depart="375.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.20" type="car" depart="375.00">
+    <vehicle id="SN_0_car.10" type="car" depart="375.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.21" type="bus" depart="393.75">
@@ -508,53 +370,23 @@
     <vehicle id="NS_1_car.21" type="car" depart="393.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.21" type="bus" depart="393.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.21" type="car" depart="393.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.22" type="bus" depart="412.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.22" type="car" depart="412.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.22" type="bus" depart="412.50">
+    <vehicle id="SN_0_bus.11" type="bus" depart="412.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.22" type="car" depart="412.50">
+    <vehicle id="SN_0_car.11" type="car" depart="412.50">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.7" type="bus" depart="420.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.7" type="car" depart="420.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.23" type="bus" depart="431.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.23" type="car" depart="431.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.23" type="bus" depart="431.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.23" type="car" depart="431.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.3" type="bus" depart="450.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.3" type="car" depart="450.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.6" type="bus" depart="450.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.6" type="car" depart="450.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.24" type="bus" depart="450.00">
         <route edges="n01_n11 n11_n21"/>
@@ -586,17 +418,11 @@
     <vehicle id="OL_3_car.6" type="car" depart="450.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.24" type="bus" depart="450.00">
+    <vehicle id="SN_0_bus.12" type="bus" depart="450.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.24" type="car" depart="450.00">
+    <vehicle id="SN_0_car.12" type="car" depart="450.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.3" type="bus" depart="450.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.3" type="car" depart="450.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.25" type="bus" depart="468.75">
         <route edges="n01_n11 n11_n21"/>
@@ -604,16 +430,10 @@
     <vehicle id="NS_1_car.25" type="car" depart="468.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.25" type="bus" depart="468.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.25" type="car" depart="468.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.8" type="bus" depart="480.00">
+    <vehicle id="LO_2_bus.2" type="bus" depart="480.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.8" type="car" depart="480.00">
+    <vehicle id="LO_2_car.2" type="car" depart="480.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.26" type="bus" depart="487.50">
@@ -622,10 +442,10 @@
     <vehicle id="NS_1_car.26" type="car" depart="487.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.26" type="bus" depart="487.50">
+    <vehicle id="SN_0_bus.13" type="bus" depart="487.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.26" type="car" depart="487.50">
+    <vehicle id="SN_0_car.13" type="car" depart="487.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.27" type="bus" depart="506.25">
@@ -633,18 +453,6 @@
     </vehicle>
     <vehicle id="NS_1_car.27" type="car" depart="506.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.27" type="bus" depart="506.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.27" type="car" depart="506.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.7" type="bus" depart="525.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.7" type="car" depart="525.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.28" type="bus" depart="525.00">
         <route edges="n01_n11 n11_n21"/>
@@ -658,17 +466,11 @@
     <vehicle id="OL_3_car.7" type="car" depart="525.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.28" type="bus" depart="525.00">
+    <vehicle id="SN_0_bus.14" type="bus" depart="525.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.28" type="car" depart="525.00">
+    <vehicle id="SN_0_car.14" type="car" depart="525.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.9" type="bus" depart="540.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.9" type="car" depart="540.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.29" type="bus" depart="543.75">
         <route edges="n01_n11 n11_n21"/>
@@ -676,22 +478,16 @@
     <vehicle id="NS_1_car.29" type="car" depart="543.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.29" type="bus" depart="543.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.29" type="car" depart="543.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.30" type="bus" depart="562.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.30" type="car" depart="562.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.30" type="bus" depart="562.50">
+    <vehicle id="SN_0_bus.15" type="bus" depart="562.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.30" type="car" depart="562.50">
+    <vehicle id="SN_0_car.15" type="car" depart="562.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.31" type="bus" depart="581.25">
@@ -700,29 +496,17 @@
     <vehicle id="NS_1_car.31" type="car" depart="581.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.31" type="bus" depart="581.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.31" type="car" depart="581.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.4" type="bus" depart="600.00">
+    <vehicle id="LO_0_bus.1" type="bus" depart="600.00">
         <route edges="n12_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_0_car.4" type="car" depart="600.00">
+    <vehicle id="LO_0_car.1" type="car" depart="600.00">
         <route edges="n12_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_1_bus.8" type="bus" depart="600.00">
+    <vehicle id="LO_1_bus.2" type="bus" depart="600.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.8" type="car" depart="600.00">
+    <vehicle id="LO_1_car.2" type="car" depart="600.00">
         <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.10" type="bus" depart="600.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.10" type="car" depart="600.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.32" type="bus" depart="600.00">
         <route edges="n01_n11 n11_n21"/>
@@ -760,22 +544,22 @@
     <vehicle id="OL_3_car.8" type="car" depart="600.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.32" type="bus" depart="600.00">
+    <vehicle id="SN_0_bus.16" type="bus" depart="600.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.32" type="car" depart="600.00">
+    <vehicle id="SN_0_car.16" type="car" depart="600.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.2" type="bus" depart="600.00">
+    <vehicle id="SN_2_bus.1" type="bus" depart="600.00">
         <route edges="n21_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="SN_2_car.2" type="car" depart="600.00">
+    <vehicle id="SN_2_car.1" type="car" depart="600.00">
         <route edges="n21_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="SN_3_bus.4" type="bus" depart="600.00">
+    <vehicle id="SN_3_bus.2" type="bus" depart="600.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.4" type="car" depart="600.00">
+    <vehicle id="SN_3_car.2" type="car" depart="600.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.33" type="bus" depart="618.75">
@@ -784,22 +568,16 @@
     <vehicle id="NS_1_car.33" type="car" depart="618.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.33" type="bus" depart="618.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.33" type="car" depart="618.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.34" type="bus" depart="637.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.34" type="car" depart="637.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.34" type="bus" depart="637.50">
+    <vehicle id="SN_0_bus.17" type="bus" depart="637.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.34" type="car" depart="637.50">
+    <vehicle id="SN_0_car.17" type="car" depart="637.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.35" type="bus" depart="656.25">
@@ -807,24 +585,6 @@
     </vehicle>
     <vehicle id="NS_1_car.35" type="car" depart="656.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.35" type="bus" depart="656.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.35" type="car" depart="656.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.11" type="bus" depart="660.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.11" type="car" depart="660.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.9" type="bus" depart="675.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.9" type="car" depart="675.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.36" type="bus" depart="675.00">
         <route edges="n01_n11 n11_n21"/>
@@ -838,10 +598,10 @@
     <vehicle id="OL_3_car.9" type="car" depart="675.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.36" type="bus" depart="675.00">
+    <vehicle id="SN_0_bus.18" type="bus" depart="675.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.36" type="car" depart="675.00">
+    <vehicle id="SN_0_car.18" type="car" depart="675.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.37" type="bus" depart="693.75">
@@ -850,28 +610,22 @@
     <vehicle id="NS_1_car.37" type="car" depart="693.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.37" type="bus" depart="693.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.37" type="car" depart="693.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.38" type="bus" depart="712.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.38" type="car" depart="712.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.38" type="bus" depart="712.50">
+    <vehicle id="SN_0_bus.19" type="bus" depart="712.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.38" type="car" depart="712.50">
+    <vehicle id="SN_0_car.19" type="car" depart="712.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_2_bus.12" type="bus" depart="720.00">
+    <vehicle id="LO_2_bus.3" type="bus" depart="720.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.12" type="car" depart="720.00">
+    <vehicle id="LO_2_car.3" type="car" depart="720.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.39" type="bus" depart="731.25">
@@ -879,24 +633,6 @@
     </vehicle>
     <vehicle id="NS_1_car.39" type="car" depart="731.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.39" type="bus" depart="731.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.39" type="car" depart="731.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.5" type="bus" depart="750.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.5" type="car" depart="750.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.10" type="bus" depart="750.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.10" type="car" depart="750.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.40" type="bus" depart="750.00">
         <route edges="n01_n11 n11_n21"/>
@@ -928,17 +664,11 @@
     <vehicle id="OL_3_car.10" type="car" depart="750.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.40" type="bus" depart="750.00">
+    <vehicle id="SN_0_bus.20" type="bus" depart="750.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.40" type="car" depart="750.00">
+    <vehicle id="SN_0_car.20" type="car" depart="750.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.5" type="bus" depart="750.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.5" type="car" depart="750.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.41" type="bus" depart="768.75">
         <route edges="n01_n11 n11_n21"/>
@@ -946,28 +676,16 @@
     <vehicle id="NS_1_car.41" type="car" depart="768.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.41" type="bus" depart="768.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.41" type="car" depart="768.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.13" type="bus" depart="780.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.13" type="car" depart="780.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
     <vehicle id="NS_1_bus.42" type="bus" depart="787.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.42" type="car" depart="787.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.42" type="bus" depart="787.50">
+    <vehicle id="SN_0_bus.21" type="bus" depart="787.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.42" type="car" depart="787.50">
+    <vehicle id="SN_0_car.21" type="car" depart="787.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.43" type="bus" depart="806.25">
@@ -975,18 +693,6 @@
     </vehicle>
     <vehicle id="NS_1_car.43" type="car" depart="806.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.43" type="bus" depart="806.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.43" type="car" depart="806.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.11" type="bus" depart="825.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.11" type="car" depart="825.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.44" type="bus" depart="825.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1000,17 +706,11 @@
     <vehicle id="OL_3_car.11" type="car" depart="825.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.44" type="bus" depart="825.00">
+    <vehicle id="SN_0_bus.22" type="bus" depart="825.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.44" type="car" depart="825.00">
+    <vehicle id="SN_0_car.22" type="car" depart="825.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.14" type="bus" depart="840.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.14" type="car" depart="840.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.45" type="bus" depart="843.75">
         <route edges="n01_n11 n11_n21"/>
@@ -1018,22 +718,16 @@
     <vehicle id="NS_1_car.45" type="car" depart="843.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.45" type="bus" depart="843.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.45" type="car" depart="843.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.46" type="bus" depart="862.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.46" type="car" depart="862.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.46" type="bus" depart="862.50">
+    <vehicle id="SN_0_bus.23" type="bus" depart="862.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.46" type="car" depart="862.50">
+    <vehicle id="SN_0_car.23" type="car" depart="862.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.47" type="bus" depart="881.25">
@@ -1042,29 +736,11 @@
     <vehicle id="NS_1_car.47" type="car" depart="881.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.47" type="bus" depart="881.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.47" type="car" depart="881.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.6" type="bus" depart="900.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.6" type="car" depart="900.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.12" type="bus" depart="900.00">
+    <vehicle id="LO_1_bus.3" type="bus" depart="900.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.12" type="car" depart="900.00">
+    <vehicle id="LO_1_car.3" type="car" depart="900.00">
         <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.15" type="bus" depart="900.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.15" type="car" depart="900.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.48" type="bus" depart="900.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1102,22 +778,16 @@
     <vehicle id="OL_3_car.12" type="car" depart="900.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.48" type="bus" depart="900.00">
+    <vehicle id="SN_0_bus.24" type="bus" depart="900.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.48" type="car" depart="900.00">
+    <vehicle id="SN_0_car.24" type="car" depart="900.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.3" type="bus" depart="900.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_2_car.3" type="car" depart="900.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.6" type="bus" depart="900.00">
+    <vehicle id="SN_3_bus.3" type="bus" depart="900.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.6" type="car" depart="900.00">
+    <vehicle id="SN_3_car.3" type="car" depart="900.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.49" type="bus" depart="918.75">
@@ -1126,22 +796,16 @@
     <vehicle id="NS_1_car.49" type="car" depart="918.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.49" type="bus" depart="918.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.49" type="car" depart="918.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.50" type="bus" depart="937.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.50" type="car" depart="937.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.50" type="bus" depart="937.50">
+    <vehicle id="SN_0_bus.25" type="bus" depart="937.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.50" type="car" depart="937.50">
+    <vehicle id="SN_0_car.25" type="car" depart="937.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.51" type="bus" depart="956.25">
@@ -1150,23 +814,11 @@
     <vehicle id="NS_1_car.51" type="car" depart="956.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.51" type="bus" depart="956.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.51" type="car" depart="956.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.16" type="bus" depart="960.00">
+    <vehicle id="LO_2_bus.4" type="bus" depart="960.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.16" type="car" depart="960.00">
+    <vehicle id="LO_2_car.4" type="car" depart="960.00">
         <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.13" type="bus" depart="975.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.13" type="car" depart="975.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.52" type="bus" depart="975.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1180,10 +832,10 @@
     <vehicle id="OL_3_car.13" type="car" depart="975.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.52" type="bus" depart="975.00">
+    <vehicle id="SN_0_bus.26" type="bus" depart="975.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.52" type="car" depart="975.00">
+    <vehicle id="SN_0_car.26" type="car" depart="975.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.53" type="bus" depart="993.75">
@@ -1192,53 +844,23 @@
     <vehicle id="NS_1_car.53" type="car" depart="993.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.53" type="bus" depart="993.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.53" type="car" depart="993.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.54" type="bus" depart="1012.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.54" type="car" depart="1012.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.54" type="bus" depart="1012.50">
+    <vehicle id="SN_0_bus.27" type="bus" depart="1012.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.54" type="car" depart="1012.50">
+    <vehicle id="SN_0_car.27" type="car" depart="1012.50">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.17" type="bus" depart="1020.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.17" type="car" depart="1020.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.55" type="bus" depart="1031.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.55" type="car" depart="1031.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.55" type="bus" depart="1031.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.55" type="car" depart="1031.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.7" type="bus" depart="1050.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.7" type="car" depart="1050.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.14" type="bus" depart="1050.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.14" type="car" depart="1050.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.56" type="bus" depart="1050.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1270,17 +892,11 @@
     <vehicle id="OL_3_car.14" type="car" depart="1050.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.56" type="bus" depart="1050.00">
+    <vehicle id="SN_0_bus.28" type="bus" depart="1050.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.56" type="car" depart="1050.00">
+    <vehicle id="SN_0_car.28" type="car" depart="1050.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.7" type="bus" depart="1050.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.7" type="car" depart="1050.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.57" type="bus" depart="1068.75">
         <route edges="n01_n11 n11_n21"/>
@@ -1288,28 +904,16 @@
     <vehicle id="NS_1_car.57" type="car" depart="1068.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.57" type="bus" depart="1068.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.57" type="car" depart="1068.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.18" type="bus" depart="1080.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.18" type="car" depart="1080.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
     <vehicle id="NS_1_bus.58" type="bus" depart="1087.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.58" type="car" depart="1087.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.58" type="bus" depart="1087.50">
+    <vehicle id="SN_0_bus.29" type="bus" depart="1087.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.58" type="car" depart="1087.50">
+    <vehicle id="SN_0_car.29" type="car" depart="1087.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.59" type="bus" depart="1106.25">
@@ -1317,18 +921,6 @@
     </vehicle>
     <vehicle id="NS_1_car.59" type="car" depart="1106.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.59" type="bus" depart="1106.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.59" type="car" depart="1106.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.15" type="bus" depart="1125.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.15" type="car" depart="1125.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.60" type="bus" depart="1125.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1342,17 +934,11 @@
     <vehicle id="OL_3_car.15" type="car" depart="1125.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.60" type="bus" depart="1125.00">
+    <vehicle id="SN_0_bus.30" type="bus" depart="1125.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.60" type="car" depart="1125.00">
+    <vehicle id="SN_0_car.30" type="car" depart="1125.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.19" type="bus" depart="1140.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.19" type="car" depart="1140.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.61" type="bus" depart="1143.75">
         <route edges="n01_n11 n11_n21"/>
@@ -1360,22 +946,16 @@
     <vehicle id="NS_1_car.61" type="car" depart="1143.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.61" type="bus" depart="1143.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.61" type="car" depart="1143.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.62" type="bus" depart="1162.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.62" type="car" depart="1162.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.62" type="bus" depart="1162.50">
+    <vehicle id="SN_0_bus.31" type="bus" depart="1162.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.62" type="car" depart="1162.50">
+    <vehicle id="SN_0_car.31" type="car" depart="1162.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.63" type="bus" depart="1181.25">
@@ -1384,28 +964,22 @@
     <vehicle id="NS_1_car.63" type="car" depart="1181.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.63" type="bus" depart="1181.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.63" type="car" depart="1181.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.8" type="bus" depart="1200.00">
+    <vehicle id="LO_0_bus.2" type="bus" depart="1200.00">
         <route edges="n12_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_0_car.8" type="car" depart="1200.00">
+    <vehicle id="LO_0_car.2" type="car" depart="1200.00">
         <route edges="n12_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_1_bus.16" type="bus" depart="1200.00">
+    <vehicle id="LO_1_bus.4" type="bus" depart="1200.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.16" type="car" depart="1200.00">
+    <vehicle id="LO_1_car.4" type="car" depart="1200.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_2_bus.20" type="bus" depart="1200.00">
+    <vehicle id="LO_2_bus.5" type="bus" depart="1200.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.20" type="car" depart="1200.00">
+    <vehicle id="LO_2_car.5" type="car" depart="1200.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.64" type="bus" depart="1200.00">
@@ -1444,22 +1018,22 @@
     <vehicle id="OL_3_car.16" type="car" depart="1200.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.64" type="bus" depart="1200.00">
+    <vehicle id="SN_0_bus.32" type="bus" depart="1200.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.64" type="car" depart="1200.00">
+    <vehicle id="SN_0_car.32" type="car" depart="1200.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.4" type="bus" depart="1200.00">
+    <vehicle id="SN_2_bus.2" type="bus" depart="1200.00">
         <route edges="n21_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="SN_2_car.4" type="car" depart="1200.00">
+    <vehicle id="SN_2_car.2" type="car" depart="1200.00">
         <route edges="n21_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="SN_3_bus.8" type="bus" depart="1200.00">
+    <vehicle id="SN_3_bus.4" type="bus" depart="1200.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.8" type="car" depart="1200.00">
+    <vehicle id="SN_3_car.4" type="car" depart="1200.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.65" type="bus" depart="1218.75">
@@ -1468,22 +1042,16 @@
     <vehicle id="NS_1_car.65" type="car" depart="1218.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.65" type="bus" depart="1218.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.65" type="car" depart="1218.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.66" type="bus" depart="1237.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.66" type="car" depart="1237.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.66" type="bus" depart="1237.50">
+    <vehicle id="SN_0_bus.33" type="bus" depart="1237.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.66" type="car" depart="1237.50">
+    <vehicle id="SN_0_car.33" type="car" depart="1237.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.67" type="bus" depart="1256.25">
@@ -1491,24 +1059,6 @@
     </vehicle>
     <vehicle id="NS_1_car.67" type="car" depart="1256.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.67" type="bus" depart="1256.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.67" type="car" depart="1256.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.21" type="bus" depart="1260.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.21" type="car" depart="1260.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.17" type="bus" depart="1275.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.17" type="car" depart="1275.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.68" type="bus" depart="1275.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1522,10 +1072,10 @@
     <vehicle id="OL_3_car.17" type="car" depart="1275.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.68" type="bus" depart="1275.00">
+    <vehicle id="SN_0_bus.34" type="bus" depart="1275.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.68" type="car" depart="1275.00">
+    <vehicle id="SN_0_car.34" type="car" depart="1275.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.69" type="bus" depart="1293.75">
@@ -1534,53 +1084,23 @@
     <vehicle id="NS_1_car.69" type="car" depart="1293.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.69" type="bus" depart="1293.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.69" type="car" depart="1293.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.70" type="bus" depart="1312.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.70" type="car" depart="1312.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.70" type="bus" depart="1312.50">
+    <vehicle id="SN_0_bus.35" type="bus" depart="1312.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.70" type="car" depart="1312.50">
+    <vehicle id="SN_0_car.35" type="car" depart="1312.50">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.22" type="bus" depart="1320.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.22" type="car" depart="1320.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.71" type="bus" depart="1331.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.71" type="car" depart="1331.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.71" type="bus" depart="1331.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.71" type="car" depart="1331.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.9" type="bus" depart="1350.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.9" type="car" depart="1350.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.18" type="bus" depart="1350.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.18" type="car" depart="1350.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.72" type="bus" depart="1350.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1612,17 +1132,11 @@
     <vehicle id="OL_3_car.18" type="car" depart="1350.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.72" type="bus" depart="1350.00">
+    <vehicle id="SN_0_bus.36" type="bus" depart="1350.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.72" type="car" depart="1350.00">
+    <vehicle id="SN_0_car.36" type="car" depart="1350.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.9" type="bus" depart="1350.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.9" type="car" depart="1350.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.73" type="bus" depart="1368.75">
         <route edges="n01_n11 n11_n21"/>
@@ -1630,28 +1144,16 @@
     <vehicle id="NS_1_car.73" type="car" depart="1368.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.73" type="bus" depart="1368.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.73" type="car" depart="1368.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.23" type="bus" depart="1380.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.23" type="car" depart="1380.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
     <vehicle id="NS_1_bus.74" type="bus" depart="1387.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.74" type="car" depart="1387.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.74" type="bus" depart="1387.50">
+    <vehicle id="SN_0_bus.37" type="bus" depart="1387.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.74" type="car" depart="1387.50">
+    <vehicle id="SN_0_car.37" type="car" depart="1387.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.75" type="bus" depart="1406.25">
@@ -1659,18 +1161,6 @@
     </vehicle>
     <vehicle id="NS_1_car.75" type="car" depart="1406.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.75" type="bus" depart="1406.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.75" type="car" depart="1406.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.19" type="bus" depart="1425.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.19" type="car" depart="1425.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.76" type="bus" depart="1425.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1684,16 +1174,16 @@
     <vehicle id="OL_3_car.19" type="car" depart="1425.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.76" type="bus" depart="1425.00">
+    <vehicle id="SN_0_bus.38" type="bus" depart="1425.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.76" type="car" depart="1425.00">
+    <vehicle id="SN_0_car.38" type="car" depart="1425.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_2_bus.24" type="bus" depart="1440.00">
+    <vehicle id="LO_2_bus.6" type="bus" depart="1440.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.24" type="car" depart="1440.00">
+    <vehicle id="LO_2_car.6" type="car" depart="1440.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.77" type="bus" depart="1443.75">
@@ -1702,22 +1192,16 @@
     <vehicle id="NS_1_car.77" type="car" depart="1443.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.77" type="bus" depart="1443.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.77" type="car" depart="1443.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.78" type="bus" depart="1462.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.78" type="car" depart="1462.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.78" type="bus" depart="1462.50">
+    <vehicle id="SN_0_bus.39" type="bus" depart="1462.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.78" type="car" depart="1462.50">
+    <vehicle id="SN_0_car.39" type="car" depart="1462.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.79" type="bus" depart="1481.25">
@@ -1726,29 +1210,11 @@
     <vehicle id="NS_1_car.79" type="car" depart="1481.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.79" type="bus" depart="1481.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.79" type="car" depart="1481.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.10" type="bus" depart="1500.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.10" type="car" depart="1500.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.20" type="bus" depart="1500.00">
+    <vehicle id="LO_1_bus.5" type="bus" depart="1500.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.20" type="car" depart="1500.00">
+    <vehicle id="LO_1_car.5" type="car" depart="1500.00">
         <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.25" type="bus" depart="1500.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.25" type="car" depart="1500.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.80" type="bus" depart="1500.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1786,22 +1252,16 @@
     <vehicle id="OL_3_car.20" type="car" depart="1500.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.80" type="bus" depart="1500.00">
+    <vehicle id="SN_0_bus.40" type="bus" depart="1500.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.80" type="car" depart="1500.00">
+    <vehicle id="SN_0_car.40" type="car" depart="1500.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.5" type="bus" depart="1500.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_2_car.5" type="car" depart="1500.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.10" type="bus" depart="1500.00">
+    <vehicle id="SN_3_bus.5" type="bus" depart="1500.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.10" type="car" depart="1500.00">
+    <vehicle id="SN_3_car.5" type="car" depart="1500.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.81" type="bus" depart="1518.75">
@@ -1810,22 +1270,16 @@
     <vehicle id="NS_1_car.81" type="car" depart="1518.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.81" type="bus" depart="1518.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.81" type="car" depart="1518.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.82" type="bus" depart="1537.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.82" type="car" depart="1537.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.82" type="bus" depart="1537.50">
+    <vehicle id="SN_0_bus.41" type="bus" depart="1537.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.82" type="car" depart="1537.50">
+    <vehicle id="SN_0_car.41" type="car" depart="1537.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.83" type="bus" depart="1556.25">
@@ -1833,24 +1287,6 @@
     </vehicle>
     <vehicle id="NS_1_car.83" type="car" depart="1556.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.83" type="bus" depart="1556.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.83" type="car" depart="1556.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.26" type="bus" depart="1560.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.26" type="car" depart="1560.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.21" type="bus" depart="1575.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.21" type="car" depart="1575.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.84" type="bus" depart="1575.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1864,10 +1300,10 @@
     <vehicle id="OL_3_car.21" type="car" depart="1575.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.84" type="bus" depart="1575.00">
+    <vehicle id="SN_0_bus.42" type="bus" depart="1575.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.84" type="car" depart="1575.00">
+    <vehicle id="SN_0_car.42" type="car" depart="1575.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.85" type="bus" depart="1593.75">
@@ -1876,53 +1312,23 @@
     <vehicle id="NS_1_car.85" type="car" depart="1593.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.85" type="bus" depart="1593.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.85" type="car" depart="1593.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.86" type="bus" depart="1612.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.86" type="car" depart="1612.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.86" type="bus" depart="1612.50">
+    <vehicle id="SN_0_bus.43" type="bus" depart="1612.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.86" type="car" depart="1612.50">
+    <vehicle id="SN_0_car.43" type="car" depart="1612.50">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.27" type="bus" depart="1620.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.27" type="car" depart="1620.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.87" type="bus" depart="1631.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.87" type="car" depart="1631.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.87" type="bus" depart="1631.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.87" type="car" depart="1631.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.11" type="bus" depart="1650.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.11" type="car" depart="1650.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.22" type="bus" depart="1650.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.22" type="car" depart="1650.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.88" type="bus" depart="1650.00">
         <route edges="n01_n11 n11_n21"/>
@@ -1954,17 +1360,11 @@
     <vehicle id="OL_3_car.22" type="car" depart="1650.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.88" type="bus" depart="1650.00">
+    <vehicle id="SN_0_bus.44" type="bus" depart="1650.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.88" type="car" depart="1650.00">
+    <vehicle id="SN_0_car.44" type="car" depart="1650.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.11" type="bus" depart="1650.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.11" type="car" depart="1650.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.89" type="bus" depart="1668.75">
         <route edges="n01_n11 n11_n21"/>
@@ -1972,16 +1372,10 @@
     <vehicle id="NS_1_car.89" type="car" depart="1668.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.89" type="bus" depart="1668.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.89" type="car" depart="1668.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.28" type="bus" depart="1680.00">
+    <vehicle id="LO_2_bus.7" type="bus" depart="1680.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.28" type="car" depart="1680.00">
+    <vehicle id="LO_2_car.7" type="car" depart="1680.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.90" type="bus" depart="1687.50">
@@ -1990,10 +1384,10 @@
     <vehicle id="NS_1_car.90" type="car" depart="1687.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.90" type="bus" depart="1687.50">
+    <vehicle id="SN_0_bus.45" type="bus" depart="1687.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.90" type="car" depart="1687.50">
+    <vehicle id="SN_0_car.45" type="car" depart="1687.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.91" type="bus" depart="1706.25">
@@ -2001,18 +1395,6 @@
     </vehicle>
     <vehicle id="NS_1_car.91" type="car" depart="1706.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.91" type="bus" depart="1706.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.91" type="car" depart="1706.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.23" type="bus" depart="1725.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.23" type="car" depart="1725.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.92" type="bus" depart="1725.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2026,17 +1408,11 @@
     <vehicle id="OL_3_car.23" type="car" depart="1725.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.92" type="bus" depart="1725.00">
+    <vehicle id="SN_0_bus.46" type="bus" depart="1725.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.92" type="car" depart="1725.00">
+    <vehicle id="SN_0_car.46" type="car" depart="1725.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.29" type="bus" depart="1740.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.29" type="car" depart="1740.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.93" type="bus" depart="1743.75">
         <route edges="n01_n11 n11_n21"/>
@@ -2044,22 +1420,16 @@
     <vehicle id="NS_1_car.93" type="car" depart="1743.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.93" type="bus" depart="1743.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.93" type="car" depart="1743.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.94" type="bus" depart="1762.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.94" type="car" depart="1762.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.94" type="bus" depart="1762.50">
+    <vehicle id="SN_0_bus.47" type="bus" depart="1762.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.94" type="car" depart="1762.50">
+    <vehicle id="SN_0_car.47" type="car" depart="1762.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.95" type="bus" depart="1781.25">
@@ -2068,29 +1438,17 @@
     <vehicle id="NS_1_car.95" type="car" depart="1781.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.95" type="bus" depart="1781.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.95" type="car" depart="1781.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.12" type="bus" depart="1800.00">
+    <vehicle id="LO_0_bus.3" type="bus" depart="1800.00">
         <route edges="n12_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_0_car.12" type="car" depart="1800.00">
+    <vehicle id="LO_0_car.3" type="car" depart="1800.00">
         <route edges="n12_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_1_bus.24" type="bus" depart="1800.00">
+    <vehicle id="LO_1_bus.6" type="bus" depart="1800.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.24" type="car" depart="1800.00">
+    <vehicle id="LO_1_car.6" type="car" depart="1800.00">
         <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.30" type="bus" depart="1800.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.30" type="car" depart="1800.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.96" type="bus" depart="1800.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2128,22 +1486,22 @@
     <vehicle id="OL_3_car.24" type="car" depart="1800.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.96" type="bus" depart="1800.00">
+    <vehicle id="SN_0_bus.48" type="bus" depart="1800.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.96" type="car" depart="1800.00">
+    <vehicle id="SN_0_car.48" type="car" depart="1800.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.6" type="bus" depart="1800.00">
+    <vehicle id="SN_2_bus.3" type="bus" depart="1800.00">
         <route edges="n21_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="SN_2_car.6" type="car" depart="1800.00">
+    <vehicle id="SN_2_car.3" type="car" depart="1800.00">
         <route edges="n21_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="SN_3_bus.12" type="bus" depart="1800.00">
+    <vehicle id="SN_3_bus.6" type="bus" depart="1800.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.12" type="car" depart="1800.00">
+    <vehicle id="SN_3_car.6" type="car" depart="1800.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.97" type="bus" depart="1818.75">
@@ -2152,22 +1510,16 @@
     <vehicle id="NS_1_car.97" type="car" depart="1818.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.97" type="bus" depart="1818.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.97" type="car" depart="1818.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.98" type="bus" depart="1837.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.98" type="car" depart="1837.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.98" type="bus" depart="1837.50">
+    <vehicle id="SN_0_bus.49" type="bus" depart="1837.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.98" type="car" depart="1837.50">
+    <vehicle id="SN_0_car.49" type="car" depart="1837.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.99" type="bus" depart="1856.25">
@@ -2175,24 +1527,6 @@
     </vehicle>
     <vehicle id="NS_1_car.99" type="car" depart="1856.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.99" type="bus" depart="1856.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.99" type="car" depart="1856.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.31" type="bus" depart="1860.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.31" type="car" depart="1860.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.25" type="bus" depart="1875.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.25" type="car" depart="1875.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.100" type="bus" depart="1875.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2206,10 +1540,10 @@
     <vehicle id="OL_3_car.25" type="car" depart="1875.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.100" type="bus" depart="1875.00">
+    <vehicle id="SN_0_bus.50" type="bus" depart="1875.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.100" type="car" depart="1875.00">
+    <vehicle id="SN_0_car.50" type="car" depart="1875.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.101" type="bus" depart="1893.75">
@@ -2218,28 +1552,22 @@
     <vehicle id="NS_1_car.101" type="car" depart="1893.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.101" type="bus" depart="1893.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.101" type="car" depart="1893.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.102" type="bus" depart="1912.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.102" type="car" depart="1912.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.102" type="bus" depart="1912.50">
+    <vehicle id="SN_0_bus.51" type="bus" depart="1912.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.102" type="car" depart="1912.50">
+    <vehicle id="SN_0_car.51" type="car" depart="1912.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_2_bus.32" type="bus" depart="1920.00">
+    <vehicle id="LO_2_bus.8" type="bus" depart="1920.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.32" type="car" depart="1920.00">
+    <vehicle id="LO_2_car.8" type="car" depart="1920.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.103" type="bus" depart="1931.25">
@@ -2247,24 +1575,6 @@
     </vehicle>
     <vehicle id="NS_1_car.103" type="car" depart="1931.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.103" type="bus" depart="1931.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.103" type="car" depart="1931.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.13" type="bus" depart="1950.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.13" type="car" depart="1950.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.26" type="bus" depart="1950.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.26" type="car" depart="1950.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.104" type="bus" depart="1950.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2296,17 +1606,11 @@
     <vehicle id="OL_3_car.26" type="car" depart="1950.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.104" type="bus" depart="1950.00">
+    <vehicle id="SN_0_bus.52" type="bus" depart="1950.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.104" type="car" depart="1950.00">
+    <vehicle id="SN_0_car.52" type="car" depart="1950.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.13" type="bus" depart="1950.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.13" type="car" depart="1950.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.105" type="bus" depart="1968.75">
         <route edges="n01_n11 n11_n21"/>
@@ -2314,28 +1618,16 @@
     <vehicle id="NS_1_car.105" type="car" depart="1968.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.105" type="bus" depart="1968.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.105" type="car" depart="1968.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.33" type="bus" depart="1980.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.33" type="car" depart="1980.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
     <vehicle id="NS_1_bus.106" type="bus" depart="1987.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.106" type="car" depart="1987.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.106" type="bus" depart="1987.50">
+    <vehicle id="SN_0_bus.53" type="bus" depart="1987.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.106" type="car" depart="1987.50">
+    <vehicle id="SN_0_car.53" type="car" depart="1987.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.107" type="bus" depart="2006.25">
@@ -2343,18 +1635,6 @@
     </vehicle>
     <vehicle id="NS_1_car.107" type="car" depart="2006.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.107" type="bus" depart="2006.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.107" type="car" depart="2006.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.27" type="bus" depart="2025.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.27" type="car" depart="2025.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.108" type="bus" depart="2025.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2368,17 +1648,11 @@
     <vehicle id="OL_3_car.27" type="car" depart="2025.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.108" type="bus" depart="2025.00">
+    <vehicle id="SN_0_bus.54" type="bus" depart="2025.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.108" type="car" depart="2025.00">
+    <vehicle id="SN_0_car.54" type="car" depart="2025.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.34" type="bus" depart="2040.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.34" type="car" depart="2040.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.109" type="bus" depart="2043.75">
         <route edges="n01_n11 n11_n21"/>
@@ -2386,22 +1660,16 @@
     <vehicle id="NS_1_car.109" type="car" depart="2043.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.109" type="bus" depart="2043.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.109" type="car" depart="2043.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.110" type="bus" depart="2062.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.110" type="car" depart="2062.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.110" type="bus" depart="2062.50">
+    <vehicle id="SN_0_bus.55" type="bus" depart="2062.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.110" type="car" depart="2062.50">
+    <vehicle id="SN_0_car.55" type="car" depart="2062.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.111" type="bus" depart="2081.25">
@@ -2410,29 +1678,11 @@
     <vehicle id="NS_1_car.111" type="car" depart="2081.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.111" type="bus" depart="2081.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.111" type="car" depart="2081.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.14" type="bus" depart="2100.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.14" type="car" depart="2100.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.28" type="bus" depart="2100.00">
+    <vehicle id="LO_1_bus.7" type="bus" depart="2100.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.28" type="car" depart="2100.00">
+    <vehicle id="LO_1_car.7" type="car" depart="2100.00">
         <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.35" type="bus" depart="2100.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.35" type="car" depart="2100.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.112" type="bus" depart="2100.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2470,22 +1720,16 @@
     <vehicle id="OL_3_car.28" type="car" depart="2100.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.112" type="bus" depart="2100.00">
+    <vehicle id="SN_0_bus.56" type="bus" depart="2100.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.112" type="car" depart="2100.00">
+    <vehicle id="SN_0_car.56" type="car" depart="2100.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.7" type="bus" depart="2100.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_2_car.7" type="car" depart="2100.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.14" type="bus" depart="2100.00">
+    <vehicle id="SN_3_bus.7" type="bus" depart="2100.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.14" type="car" depart="2100.00">
+    <vehicle id="SN_3_car.7" type="car" depart="2100.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.113" type="bus" depart="2118.75">
@@ -2494,22 +1738,16 @@
     <vehicle id="NS_1_car.113" type="car" depart="2118.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.113" type="bus" depart="2118.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.113" type="car" depart="2118.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.114" type="bus" depart="2137.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.114" type="car" depart="2137.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.114" type="bus" depart="2137.50">
+    <vehicle id="SN_0_bus.57" type="bus" depart="2137.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.114" type="car" depart="2137.50">
+    <vehicle id="SN_0_car.57" type="car" depart="2137.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.115" type="bus" depart="2156.25">
@@ -2518,23 +1756,11 @@
     <vehicle id="NS_1_car.115" type="car" depart="2156.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.115" type="bus" depart="2156.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.115" type="car" depart="2156.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.36" type="bus" depart="2160.00">
+    <vehicle id="LO_2_bus.9" type="bus" depart="2160.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.36" type="car" depart="2160.00">
+    <vehicle id="LO_2_car.9" type="car" depart="2160.00">
         <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.29" type="bus" depart="2175.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.29" type="car" depart="2175.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.116" type="bus" depart="2175.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2548,10 +1774,10 @@
     <vehicle id="OL_3_car.29" type="car" depart="2175.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.116" type="bus" depart="2175.00">
+    <vehicle id="SN_0_bus.58" type="bus" depart="2175.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.116" type="car" depart="2175.00">
+    <vehicle id="SN_0_car.58" type="car" depart="2175.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.117" type="bus" depart="2193.75">
@@ -2560,53 +1786,23 @@
     <vehicle id="NS_1_car.117" type="car" depart="2193.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.117" type="bus" depart="2193.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.117" type="car" depart="2193.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.118" type="bus" depart="2212.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.118" type="car" depart="2212.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.118" type="bus" depart="2212.50">
+    <vehicle id="SN_0_bus.59" type="bus" depart="2212.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.118" type="car" depart="2212.50">
+    <vehicle id="SN_0_car.59" type="car" depart="2212.50">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.37" type="bus" depart="2220.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.37" type="car" depart="2220.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.119" type="bus" depart="2231.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.119" type="car" depart="2231.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.119" type="bus" depart="2231.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.119" type="car" depart="2231.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.15" type="bus" depart="2250.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.15" type="car" depart="2250.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.30" type="bus" depart="2250.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.30" type="car" depart="2250.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.120" type="bus" depart="2250.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2638,17 +1834,11 @@
     <vehicle id="OL_3_car.30" type="car" depart="2250.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.120" type="bus" depart="2250.00">
+    <vehicle id="SN_0_bus.60" type="bus" depart="2250.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.120" type="car" depart="2250.00">
+    <vehicle id="SN_0_car.60" type="car" depart="2250.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.15" type="bus" depart="2250.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.15" type="car" depart="2250.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.121" type="bus" depart="2268.75">
         <route edges="n01_n11 n11_n21"/>
@@ -2656,28 +1846,16 @@
     <vehicle id="NS_1_car.121" type="car" depart="2268.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.121" type="bus" depart="2268.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.121" type="car" depart="2268.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.38" type="bus" depart="2280.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.38" type="car" depart="2280.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
     <vehicle id="NS_1_bus.122" type="bus" depart="2287.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.122" type="car" depart="2287.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.122" type="bus" depart="2287.50">
+    <vehicle id="SN_0_bus.61" type="bus" depart="2287.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.122" type="car" depart="2287.50">
+    <vehicle id="SN_0_car.61" type="car" depart="2287.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.123" type="bus" depart="2306.25">
@@ -2685,18 +1863,6 @@
     </vehicle>
     <vehicle id="NS_1_car.123" type="car" depart="2306.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.123" type="bus" depart="2306.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.123" type="car" depart="2306.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.31" type="bus" depart="2325.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.31" type="car" depart="2325.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.124" type="bus" depart="2325.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2710,17 +1876,11 @@
     <vehicle id="OL_3_car.31" type="car" depart="2325.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.124" type="bus" depart="2325.00">
+    <vehicle id="SN_0_bus.62" type="bus" depart="2325.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.124" type="car" depart="2325.00">
+    <vehicle id="SN_0_car.62" type="car" depart="2325.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.39" type="bus" depart="2340.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.39" type="car" depart="2340.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.125" type="bus" depart="2343.75">
         <route edges="n01_n11 n11_n21"/>
@@ -2728,22 +1888,16 @@
     <vehicle id="NS_1_car.125" type="car" depart="2343.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.125" type="bus" depart="2343.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.125" type="car" depart="2343.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.126" type="bus" depart="2362.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.126" type="car" depart="2362.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.126" type="bus" depart="2362.50">
+    <vehicle id="SN_0_bus.63" type="bus" depart="2362.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.126" type="car" depart="2362.50">
+    <vehicle id="SN_0_car.63" type="car" depart="2362.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.127" type="bus" depart="2381.25">
@@ -2752,28 +1906,22 @@
     <vehicle id="NS_1_car.127" type="car" depart="2381.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.127" type="bus" depart="2381.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.127" type="car" depart="2381.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.16" type="bus" depart="2400.00">
+    <vehicle id="LO_0_bus.4" type="bus" depart="2400.00">
         <route edges="n12_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_0_car.16" type="car" depart="2400.00">
+    <vehicle id="LO_0_car.4" type="car" depart="2400.00">
         <route edges="n12_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_1_bus.32" type="bus" depart="2400.00">
+    <vehicle id="LO_1_bus.8" type="bus" depart="2400.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.32" type="car" depart="2400.00">
+    <vehicle id="LO_1_car.8" type="car" depart="2400.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_2_bus.40" type="bus" depart="2400.00">
+    <vehicle id="LO_2_bus.10" type="bus" depart="2400.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.40" type="car" depart="2400.00">
+    <vehicle id="LO_2_car.10" type="car" depart="2400.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.128" type="bus" depart="2400.00">
@@ -2812,22 +1960,22 @@
     <vehicle id="OL_3_car.32" type="car" depart="2400.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.128" type="bus" depart="2400.00">
+    <vehicle id="SN_0_bus.64" type="bus" depart="2400.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.128" type="car" depart="2400.00">
+    <vehicle id="SN_0_car.64" type="car" depart="2400.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.8" type="bus" depart="2400.00">
+    <vehicle id="SN_2_bus.4" type="bus" depart="2400.00">
         <route edges="n21_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="SN_2_car.8" type="car" depart="2400.00">
+    <vehicle id="SN_2_car.4" type="car" depart="2400.00">
         <route edges="n21_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="SN_3_bus.16" type="bus" depart="2400.00">
+    <vehicle id="SN_3_bus.8" type="bus" depart="2400.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.16" type="car" depart="2400.00">
+    <vehicle id="SN_3_car.8" type="car" depart="2400.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.129" type="bus" depart="2418.75">
@@ -2836,22 +1984,16 @@
     <vehicle id="NS_1_car.129" type="car" depart="2418.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.129" type="bus" depart="2418.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.129" type="car" depart="2418.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.130" type="bus" depart="2437.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.130" type="car" depart="2437.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.130" type="bus" depart="2437.50">
+    <vehicle id="SN_0_bus.65" type="bus" depart="2437.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.130" type="car" depart="2437.50">
+    <vehicle id="SN_0_car.65" type="car" depart="2437.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.131" type="bus" depart="2456.25">
@@ -2859,24 +2001,6 @@
     </vehicle>
     <vehicle id="NS_1_car.131" type="car" depart="2456.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.131" type="bus" depart="2456.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.131" type="car" depart="2456.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.41" type="bus" depart="2460.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.41" type="car" depart="2460.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.33" type="bus" depart="2475.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.33" type="car" depart="2475.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.132" type="bus" depart="2475.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2890,10 +2014,10 @@
     <vehicle id="OL_3_car.33" type="car" depart="2475.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.132" type="bus" depart="2475.00">
+    <vehicle id="SN_0_bus.66" type="bus" depart="2475.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.132" type="car" depart="2475.00">
+    <vehicle id="SN_0_car.66" type="car" depart="2475.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.133" type="bus" depart="2493.75">
@@ -2902,53 +2026,23 @@
     <vehicle id="NS_1_car.133" type="car" depart="2493.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.133" type="bus" depart="2493.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.133" type="car" depart="2493.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.134" type="bus" depart="2512.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.134" type="car" depart="2512.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.134" type="bus" depart="2512.50">
+    <vehicle id="SN_0_bus.67" type="bus" depart="2512.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.134" type="car" depart="2512.50">
+    <vehicle id="SN_0_car.67" type="car" depart="2512.50">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.42" type="bus" depart="2520.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.42" type="car" depart="2520.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.135" type="bus" depart="2531.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.135" type="car" depart="2531.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.135" type="bus" depart="2531.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.135" type="car" depart="2531.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.17" type="bus" depart="2550.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.17" type="car" depart="2550.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.34" type="bus" depart="2550.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.34" type="car" depart="2550.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.136" type="bus" depart="2550.00">
         <route edges="n01_n11 n11_n21"/>
@@ -2980,17 +2074,11 @@
     <vehicle id="OL_3_car.34" type="car" depart="2550.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.136" type="bus" depart="2550.00">
+    <vehicle id="SN_0_bus.68" type="bus" depart="2550.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.136" type="car" depart="2550.00">
+    <vehicle id="SN_0_car.68" type="car" depart="2550.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.17" type="bus" depart="2550.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.17" type="car" depart="2550.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.137" type="bus" depart="2568.75">
         <route edges="n01_n11 n11_n21"/>
@@ -2998,28 +2086,16 @@
     <vehicle id="NS_1_car.137" type="car" depart="2568.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.137" type="bus" depart="2568.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.137" type="car" depart="2568.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.43" type="bus" depart="2580.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.43" type="car" depart="2580.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
     <vehicle id="NS_1_bus.138" type="bus" depart="2587.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.138" type="car" depart="2587.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.138" type="bus" depart="2587.50">
+    <vehicle id="SN_0_bus.69" type="bus" depart="2587.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.138" type="car" depart="2587.50">
+    <vehicle id="SN_0_car.69" type="car" depart="2587.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.139" type="bus" depart="2606.25">
@@ -3027,18 +2103,6 @@
     </vehicle>
     <vehicle id="NS_1_car.139" type="car" depart="2606.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.139" type="bus" depart="2606.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.139" type="car" depart="2606.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.35" type="bus" depart="2625.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.35" type="car" depart="2625.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.140" type="bus" depart="2625.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3052,16 +2116,16 @@
     <vehicle id="OL_3_car.35" type="car" depart="2625.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.140" type="bus" depart="2625.00">
+    <vehicle id="SN_0_bus.70" type="bus" depart="2625.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.140" type="car" depart="2625.00">
+    <vehicle id="SN_0_car.70" type="car" depart="2625.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_2_bus.44" type="bus" depart="2640.00">
+    <vehicle id="LO_2_bus.11" type="bus" depart="2640.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.44" type="car" depart="2640.00">
+    <vehicle id="LO_2_car.11" type="car" depart="2640.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.141" type="bus" depart="2643.75">
@@ -3070,22 +2134,16 @@
     <vehicle id="NS_1_car.141" type="car" depart="2643.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.141" type="bus" depart="2643.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.141" type="car" depart="2643.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.142" type="bus" depart="2662.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.142" type="car" depart="2662.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.142" type="bus" depart="2662.50">
+    <vehicle id="SN_0_bus.71" type="bus" depart="2662.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.142" type="car" depart="2662.50">
+    <vehicle id="SN_0_car.71" type="car" depart="2662.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.143" type="bus" depart="2681.25">
@@ -3094,29 +2152,11 @@
     <vehicle id="NS_1_car.143" type="car" depart="2681.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.143" type="bus" depart="2681.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.143" type="car" depart="2681.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.18" type="bus" depart="2700.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.18" type="car" depart="2700.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.36" type="bus" depart="2700.00">
+    <vehicle id="LO_1_bus.9" type="bus" depart="2700.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.36" type="car" depart="2700.00">
+    <vehicle id="LO_1_car.9" type="car" depart="2700.00">
         <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.45" type="bus" depart="2700.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.45" type="car" depart="2700.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.144" type="bus" depart="2700.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3154,22 +2194,16 @@
     <vehicle id="OL_3_car.36" type="car" depart="2700.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.144" type="bus" depart="2700.00">
+    <vehicle id="SN_0_bus.72" type="bus" depart="2700.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.144" type="car" depart="2700.00">
+    <vehicle id="SN_0_car.72" type="car" depart="2700.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.9" type="bus" depart="2700.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_2_car.9" type="car" depart="2700.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.18" type="bus" depart="2700.00">
+    <vehicle id="SN_3_bus.9" type="bus" depart="2700.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.18" type="car" depart="2700.00">
+    <vehicle id="SN_3_car.9" type="car" depart="2700.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.145" type="bus" depart="2718.75">
@@ -3178,22 +2212,16 @@
     <vehicle id="NS_1_car.145" type="car" depart="2718.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.145" type="bus" depart="2718.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.145" type="car" depart="2718.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.146" type="bus" depart="2737.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.146" type="car" depart="2737.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.146" type="bus" depart="2737.50">
+    <vehicle id="SN_0_bus.73" type="bus" depart="2737.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.146" type="car" depart="2737.50">
+    <vehicle id="SN_0_car.73" type="car" depart="2737.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.147" type="bus" depart="2756.25">
@@ -3201,24 +2229,6 @@
     </vehicle>
     <vehicle id="NS_1_car.147" type="car" depart="2756.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.147" type="bus" depart="2756.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.147" type="car" depart="2756.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.46" type="bus" depart="2760.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.46" type="car" depart="2760.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.37" type="bus" depart="2775.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.37" type="car" depart="2775.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.148" type="bus" depart="2775.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3232,10 +2242,10 @@
     <vehicle id="OL_3_car.37" type="car" depart="2775.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.148" type="bus" depart="2775.00">
+    <vehicle id="SN_0_bus.74" type="bus" depart="2775.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.148" type="car" depart="2775.00">
+    <vehicle id="SN_0_car.74" type="car" depart="2775.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.149" type="bus" depart="2793.75">
@@ -3244,53 +2254,23 @@
     <vehicle id="NS_1_car.149" type="car" depart="2793.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.149" type="bus" depart="2793.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.149" type="car" depart="2793.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.150" type="bus" depart="2812.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.150" type="car" depart="2812.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.150" type="bus" depart="2812.50">
+    <vehicle id="SN_0_bus.75" type="bus" depart="2812.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.150" type="car" depart="2812.50">
+    <vehicle id="SN_0_car.75" type="car" depart="2812.50">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.47" type="bus" depart="2820.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.47" type="car" depart="2820.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.151" type="bus" depart="2831.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.151" type="car" depart="2831.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.151" type="bus" depart="2831.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.151" type="car" depart="2831.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.19" type="bus" depart="2850.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.19" type="car" depart="2850.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.38" type="bus" depart="2850.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.38" type="car" depart="2850.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.152" type="bus" depart="2850.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3322,17 +2302,11 @@
     <vehicle id="OL_3_car.38" type="car" depart="2850.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.152" type="bus" depart="2850.00">
+    <vehicle id="SN_0_bus.76" type="bus" depart="2850.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.152" type="car" depart="2850.00">
+    <vehicle id="SN_0_car.76" type="car" depart="2850.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.19" type="bus" depart="2850.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.19" type="car" depart="2850.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.153" type="bus" depart="2868.75">
         <route edges="n01_n11 n11_n21"/>
@@ -3340,16 +2314,10 @@
     <vehicle id="NS_1_car.153" type="car" depart="2868.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.153" type="bus" depart="2868.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.153" type="car" depart="2868.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.48" type="bus" depart="2880.00">
+    <vehicle id="LO_2_bus.12" type="bus" depart="2880.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.48" type="car" depart="2880.00">
+    <vehicle id="LO_2_car.12" type="car" depart="2880.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.154" type="bus" depart="2887.50">
@@ -3358,10 +2326,10 @@
     <vehicle id="NS_1_car.154" type="car" depart="2887.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.154" type="bus" depart="2887.50">
+    <vehicle id="SN_0_bus.77" type="bus" depart="2887.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.154" type="car" depart="2887.50">
+    <vehicle id="SN_0_car.77" type="car" depart="2887.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.155" type="bus" depart="2906.25">
@@ -3369,18 +2337,6 @@
     </vehicle>
     <vehicle id="NS_1_car.155" type="car" depart="2906.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.155" type="bus" depart="2906.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.155" type="car" depart="2906.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.39" type="bus" depart="2925.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.39" type="car" depart="2925.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.156" type="bus" depart="2925.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3394,17 +2350,11 @@
     <vehicle id="OL_3_car.39" type="car" depart="2925.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.156" type="bus" depart="2925.00">
+    <vehicle id="SN_0_bus.78" type="bus" depart="2925.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.156" type="car" depart="2925.00">
+    <vehicle id="SN_0_car.78" type="car" depart="2925.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.49" type="bus" depart="2940.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.49" type="car" depart="2940.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.157" type="bus" depart="2943.75">
         <route edges="n01_n11 n11_n21"/>
@@ -3412,22 +2362,16 @@
     <vehicle id="NS_1_car.157" type="car" depart="2943.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.157" type="bus" depart="2943.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.157" type="car" depart="2943.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.158" type="bus" depart="2962.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.158" type="car" depart="2962.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.158" type="bus" depart="2962.50">
+    <vehicle id="SN_0_bus.79" type="bus" depart="2962.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.158" type="car" depart="2962.50">
+    <vehicle id="SN_0_car.79" type="car" depart="2962.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.159" type="bus" depart="2981.25">
@@ -3436,29 +2380,17 @@
     <vehicle id="NS_1_car.159" type="car" depart="2981.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.159" type="bus" depart="2981.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.159" type="car" depart="2981.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.20" type="bus" depart="3000.00">
+    <vehicle id="LO_0_bus.5" type="bus" depart="3000.00">
         <route edges="n12_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_0_car.20" type="car" depart="3000.00">
+    <vehicle id="LO_0_car.5" type="car" depart="3000.00">
         <route edges="n12_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_1_bus.40" type="bus" depart="3000.00">
+    <vehicle id="LO_1_bus.10" type="bus" depart="3000.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.40" type="car" depart="3000.00">
+    <vehicle id="LO_1_car.10" type="car" depart="3000.00">
         <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.50" type="bus" depart="3000.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.50" type="car" depart="3000.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.160" type="bus" depart="3000.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3496,22 +2428,22 @@
     <vehicle id="OL_3_car.40" type="car" depart="3000.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.160" type="bus" depart="3000.00">
+    <vehicle id="SN_0_bus.80" type="bus" depart="3000.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.160" type="car" depart="3000.00">
+    <vehicle id="SN_0_car.80" type="car" depart="3000.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.10" type="bus" depart="3000.00">
+    <vehicle id="SN_2_bus.5" type="bus" depart="3000.00">
         <route edges="n21_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="SN_2_car.10" type="car" depart="3000.00">
+    <vehicle id="SN_2_car.5" type="car" depart="3000.00">
         <route edges="n21_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="SN_3_bus.20" type="bus" depart="3000.00">
+    <vehicle id="SN_3_bus.10" type="bus" depart="3000.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.20" type="car" depart="3000.00">
+    <vehicle id="SN_3_car.10" type="car" depart="3000.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.161" type="bus" depart="3018.75">
@@ -3520,22 +2452,16 @@
     <vehicle id="NS_1_car.161" type="car" depart="3018.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.161" type="bus" depart="3018.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.161" type="car" depart="3018.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.162" type="bus" depart="3037.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.162" type="car" depart="3037.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.162" type="bus" depart="3037.50">
+    <vehicle id="SN_0_bus.81" type="bus" depart="3037.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.162" type="car" depart="3037.50">
+    <vehicle id="SN_0_car.81" type="car" depart="3037.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.163" type="bus" depart="3056.25">
@@ -3543,24 +2469,6 @@
     </vehicle>
     <vehicle id="NS_1_car.163" type="car" depart="3056.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.163" type="bus" depart="3056.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.163" type="car" depart="3056.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.51" type="bus" depart="3060.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.51" type="car" depart="3060.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.41" type="bus" depart="3075.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.41" type="car" depart="3075.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.164" type="bus" depart="3075.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3574,10 +2482,10 @@
     <vehicle id="OL_3_car.41" type="car" depart="3075.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.164" type="bus" depart="3075.00">
+    <vehicle id="SN_0_bus.82" type="bus" depart="3075.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.164" type="car" depart="3075.00">
+    <vehicle id="SN_0_car.82" type="car" depart="3075.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.165" type="bus" depart="3093.75">
@@ -3586,28 +2494,22 @@
     <vehicle id="NS_1_car.165" type="car" depart="3093.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.165" type="bus" depart="3093.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.165" type="car" depart="3093.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.166" type="bus" depart="3112.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.166" type="car" depart="3112.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.166" type="bus" depart="3112.50">
+    <vehicle id="SN_0_bus.83" type="bus" depart="3112.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.166" type="car" depart="3112.50">
+    <vehicle id="SN_0_car.83" type="car" depart="3112.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="LO_2_bus.52" type="bus" depart="3120.00">
+    <vehicle id="LO_2_bus.13" type="bus" depart="3120.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.52" type="car" depart="3120.00">
+    <vehicle id="LO_2_car.13" type="car" depart="3120.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.167" type="bus" depart="3131.25">
@@ -3615,24 +2517,6 @@
     </vehicle>
     <vehicle id="NS_1_car.167" type="car" depart="3131.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.167" type="bus" depart="3131.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.167" type="car" depart="3131.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.21" type="bus" depart="3150.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.21" type="car" depart="3150.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.42" type="bus" depart="3150.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.42" type="car" depart="3150.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.168" type="bus" depart="3150.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3664,17 +2548,11 @@
     <vehicle id="OL_3_car.42" type="car" depart="3150.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.168" type="bus" depart="3150.00">
+    <vehicle id="SN_0_bus.84" type="bus" depart="3150.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.168" type="car" depart="3150.00">
+    <vehicle id="SN_0_car.84" type="car" depart="3150.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.21" type="bus" depart="3150.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.21" type="car" depart="3150.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.169" type="bus" depart="3168.75">
         <route edges="n01_n11 n11_n21"/>
@@ -3682,28 +2560,16 @@
     <vehicle id="NS_1_car.169" type="car" depart="3168.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.169" type="bus" depart="3168.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.169" type="car" depart="3168.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.53" type="bus" depart="3180.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.53" type="car" depart="3180.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
     <vehicle id="NS_1_bus.170" type="bus" depart="3187.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.170" type="car" depart="3187.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.170" type="bus" depart="3187.50">
+    <vehicle id="SN_0_bus.85" type="bus" depart="3187.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.170" type="car" depart="3187.50">
+    <vehicle id="SN_0_car.85" type="car" depart="3187.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.171" type="bus" depart="3206.25">
@@ -3711,18 +2577,6 @@
     </vehicle>
     <vehicle id="NS_1_car.171" type="car" depart="3206.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.171" type="bus" depart="3206.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.171" type="car" depart="3206.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.43" type="bus" depart="3225.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.43" type="car" depart="3225.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.172" type="bus" depart="3225.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3736,17 +2590,11 @@
     <vehicle id="OL_3_car.43" type="car" depart="3225.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.172" type="bus" depart="3225.00">
+    <vehicle id="SN_0_bus.86" type="bus" depart="3225.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.172" type="car" depart="3225.00">
+    <vehicle id="SN_0_car.86" type="car" depart="3225.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.54" type="bus" depart="3240.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.54" type="car" depart="3240.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.173" type="bus" depart="3243.75">
         <route edges="n01_n11 n11_n21"/>
@@ -3754,22 +2602,16 @@
     <vehicle id="NS_1_car.173" type="car" depart="3243.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.173" type="bus" depart="3243.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.173" type="car" depart="3243.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.174" type="bus" depart="3262.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.174" type="car" depart="3262.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.174" type="bus" depart="3262.50">
+    <vehicle id="SN_0_bus.87" type="bus" depart="3262.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.174" type="car" depart="3262.50">
+    <vehicle id="SN_0_car.87" type="car" depart="3262.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.175" type="bus" depart="3281.25">
@@ -3778,29 +2620,11 @@
     <vehicle id="NS_1_car.175" type="car" depart="3281.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.175" type="bus" depart="3281.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.175" type="car" depart="3281.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.22" type="bus" depart="3300.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.22" type="car" depart="3300.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.44" type="bus" depart="3300.00">
+    <vehicle id="LO_1_bus.11" type="bus" depart="3300.00">
         <route edges="n12_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="LO_1_car.44" type="car" depart="3300.00">
+    <vehicle id="LO_1_car.11" type="car" depart="3300.00">
         <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.55" type="bus" depart="3300.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.55" type="car" depart="3300.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.176" type="bus" depart="3300.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3838,22 +2662,16 @@
     <vehicle id="OL_3_car.44" type="car" depart="3300.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.176" type="bus" depart="3300.00">
+    <vehicle id="SN_0_bus.88" type="bus" depart="3300.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.176" type="car" depart="3300.00">
+    <vehicle id="SN_0_car.88" type="car" depart="3300.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_2_bus.11" type="bus" depart="3300.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_2_car.11" type="car" depart="3300.00">
-        <route edges="n21_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.22" type="bus" depart="3300.00">
+    <vehicle id="SN_3_bus.11" type="bus" depart="3300.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_3_car.22" type="car" depart="3300.00">
+    <vehicle id="SN_3_car.11" type="car" depart="3300.00">
         <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.177" type="bus" depart="3318.75">
@@ -3862,22 +2680,16 @@
     <vehicle id="NS_1_car.177" type="car" depart="3318.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.177" type="bus" depart="3318.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.177" type="car" depart="3318.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.178" type="bus" depart="3337.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.178" type="car" depart="3337.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.178" type="bus" depart="3337.50">
+    <vehicle id="SN_0_bus.89" type="bus" depart="3337.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.178" type="car" depart="3337.50">
+    <vehicle id="SN_0_car.89" type="car" depart="3337.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.179" type="bus" depart="3356.25">
@@ -3886,23 +2698,11 @@
     <vehicle id="NS_1_car.179" type="car" depart="3356.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.179" type="bus" depart="3356.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.179" type="car" depart="3356.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.56" type="bus" depart="3360.00">
+    <vehicle id="LO_2_bus.14" type="bus" depart="3360.00">
         <route edges="n12_n11 n11_n10"/>
     </vehicle>
-    <vehicle id="LO_2_car.56" type="car" depart="3360.00">
+    <vehicle id="LO_2_car.14" type="car" depart="3360.00">
         <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.45" type="bus" depart="3375.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.45" type="car" depart="3375.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.180" type="bus" depart="3375.00">
         <route edges="n01_n11 n11_n21"/>
@@ -3916,10 +2716,10 @@
     <vehicle id="OL_3_car.45" type="car" depart="3375.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.180" type="bus" depart="3375.00">
+    <vehicle id="SN_0_bus.90" type="bus" depart="3375.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.180" type="car" depart="3375.00">
+    <vehicle id="SN_0_car.90" type="car" depart="3375.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.181" type="bus" depart="3393.75">
@@ -3928,53 +2728,23 @@
     <vehicle id="NS_1_car.181" type="car" depart="3393.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.181" type="bus" depart="3393.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.181" type="car" depart="3393.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.182" type="bus" depart="3412.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.182" type="car" depart="3412.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.182" type="bus" depart="3412.50">
+    <vehicle id="SN_0_bus.91" type="bus" depart="3412.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.182" type="car" depart="3412.50">
+    <vehicle id="SN_0_car.91" type="car" depart="3412.50">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.57" type="bus" depart="3420.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.57" type="car" depart="3420.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.183" type="bus" depart="3431.25">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.183" type="car" depart="3431.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.183" type="bus" depart="3431.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.183" type="car" depart="3431.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_bus.23" type="bus" depart="3450.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_0_car.23" type="car" depart="3450.00">
-        <route edges="n12_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.46" type="bus" depart="3450.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.46" type="car" depart="3450.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.184" type="bus" depart="3450.00">
         <route edges="n01_n11 n11_n21"/>
@@ -4006,17 +2776,11 @@
     <vehicle id="OL_3_car.46" type="car" depart="3450.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.184" type="bus" depart="3450.00">
+    <vehicle id="SN_0_bus.92" type="bus" depart="3450.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.184" type="car" depart="3450.00">
+    <vehicle id="SN_0_car.92" type="car" depart="3450.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_3_bus.23" type="bus" depart="3450.00">
-        <route edges="n21_n11 n11_n12"/>
-    </vehicle>
-    <vehicle id="SN_3_car.23" type="car" depart="3450.00">
-        <route edges="n21_n11 n11_n12"/>
     </vehicle>
     <vehicle id="NS_1_bus.185" type="bus" depart="3468.75">
         <route edges="n01_n11 n11_n21"/>
@@ -4024,28 +2788,16 @@
     <vehicle id="NS_1_car.185" type="car" depart="3468.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.185" type="bus" depart="3468.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.185" type="car" depart="3468.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.58" type="bus" depart="3480.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.58" type="car" depart="3480.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
     <vehicle id="NS_1_bus.186" type="bus" depart="3487.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.186" type="car" depart="3487.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.186" type="bus" depart="3487.50">
+    <vehicle id="SN_0_bus.93" type="bus" depart="3487.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.186" type="car" depart="3487.50">
+    <vehicle id="SN_0_car.93" type="car" depart="3487.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.187" type="bus" depart="3506.25">
@@ -4053,18 +2805,6 @@
     </vehicle>
     <vehicle id="NS_1_car.187" type="car" depart="3506.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.187" type="bus" depart="3506.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.187" type="car" depart="3506.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_1_bus.47" type="bus" depart="3525.00">
-        <route edges="n12_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="LO_1_car.47" type="car" depart="3525.00">
-        <route edges="n12_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_bus.188" type="bus" depart="3525.00">
         <route edges="n01_n11 n11_n21"/>
@@ -4078,17 +2818,11 @@
     <vehicle id="OL_3_car.47" type="car" depart="3525.00">
         <route edges="n10_n11 n11_n12"/>
     </vehicle>
-    <vehicle id="SN_0_bus.188" type="bus" depart="3525.00">
+    <vehicle id="SN_0_bus.94" type="bus" depart="3525.00">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.188" type="car" depart="3525.00">
+    <vehicle id="SN_0_car.94" type="car" depart="3525.00">
         <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="LO_2_bus.59" type="bus" depart="3540.00">
-        <route edges="n12_n11 n11_n10"/>
-    </vehicle>
-    <vehicle id="LO_2_car.59" type="car" depart="3540.00">
-        <route edges="n12_n11 n11_n10"/>
     </vehicle>
     <vehicle id="NS_1_bus.189" type="bus" depart="3543.75">
         <route edges="n01_n11 n11_n21"/>
@@ -4096,22 +2830,16 @@
     <vehicle id="NS_1_car.189" type="car" depart="3543.75">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.189" type="bus" depart="3543.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.189" type="car" depart="3543.75">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
     <vehicle id="NS_1_bus.190" type="bus" depart="3562.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
     <vehicle id="NS_1_car.190" type="car" depart="3562.50">
         <route edges="n01_n11 n11_n21"/>
     </vehicle>
-    <vehicle id="SN_0_bus.190" type="bus" depart="3562.50">
+    <vehicle id="SN_0_bus.95" type="bus" depart="3562.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
-    <vehicle id="SN_0_car.190" type="car" depart="3562.50">
+    <vehicle id="SN_0_car.95" type="car" depart="3562.50">
         <route edges="n21_n11 n11_n01"/>
     </vehicle>
     <vehicle id="NS_1_bus.191" type="bus" depart="3581.25">
@@ -4119,11 +2847,5 @@
     </vehicle>
     <vehicle id="NS_1_car.191" type="car" depart="3581.25">
         <route edges="n01_n11 n11_n21"/>
-    </vehicle>
-    <vehicle id="SN_0_bus.191" type="bus" depart="3581.25">
-        <route edges="n21_n11 n11_n01"/>
-    </vehicle>
-    <vehicle id="SN_0_car.191" type="car" depart="3581.25">
-        <route edges="n21_n11 n11_n01"/>
     </vehicle>
 </routes>
