@@ -65,9 +65,15 @@ Execute o script `treinar_dqn_sumorl.py` com os argumentos desejados:
 | `--episodios` | `100` | Número total de episódios de treinamento |
 | `--rotasdir` | `rotas_jtr` | Pasta onde estão os arquivos de rota utilizados |
 | `--troca` | `10` | A cada quantos episódios o script troca o arquivo de tráfego |
+<<<<<<< HEAD
 | `--net` | `sumoBase/grid.net.xml` | Caminho para o arquivo do mapa (`.net.xml`) |
 | `--add` | `sumoBase/grid.add.xml` | Caminho para o arquivo adicional (`.add.xml`) |
 | `--tls` | `sumoBase/tls_config.json` | Caminho para o JSON que define o tipo de cada semáforo |
+=======
+| `--net` | `baseSumo/grid.net.xml` | Caminho para o arquivo do mapa (`.net.xml`) |
+| `--add` | `baseSumo/grid.add.xml` | Caminho para o arquivo adicional (`.add.xml`) |
+| `--tls` | `baseSumo/tls_config.json` | Caminho para o JSON que define o tipo de cada semáforo |
+>>>>>>> origin/main
 
 > A divisão `episodios / troca` deve ser igual ao número de arquivos de rota dentro da pasta `rotas_jtr`.
 
@@ -76,7 +82,11 @@ Execute o script `treinar_dqn_sumorl.py` com os argumentos desejados:
 ### **Exemplo de uso**
 
 ```bash
+<<<<<<< HEAD
 python3 treinar_dqn_sumorl.py --validacao --episodios 8100 --rotasdir rotas_jtr --net sumoBase/grid.net.xml --add sumoBase/grid.add.xml --tls sumoBase/tls_config.json --troca 100
+=======
+python3 treinar_dqn_sumorl.py --validacao --episodios 8100 --rotasdir rotas_jtr --net baseSumo/grid.net.xml --add baseSumo/grid.add.xml --tls baseSumo/tls_config.json --troca 100
+>>>>>>> origin/main
 ```
 
 > Treina os agentes configurados como `"R"` no arquivo `tls_config.json` por **8100 episódios**,  
@@ -110,4 +120,7 @@ env = sumo_rl.parallel_env(
 Pode-se alterar `reward_fn` no código para usar funções personalizadas.
 
 ---
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main

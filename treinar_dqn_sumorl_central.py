@@ -19,9 +19,10 @@ EPSILON_END = 0.01
 EPSILON_DECAY = 0.9995
 MEMORY_SIZE = 20000
 BATCH_SIZE = 64
-TARGET_UPDATE = 10
+TARGET_UPDATE = 20
 DELTA_TIME = 30  # passos de simulação do SUMO
-
+TAU = 0.01
+FIXED_EPSILON = 0.2
 #recompensa
 def minha_recompensa(env):
     tls = env.sumo.trafficlight.getIDList()[0]
@@ -41,9 +42,9 @@ def minha_recompensa(env):
 class DQN(nn.Module):
     def __init__(self, state_size, action_size):
         super().__init__()
-        self.fc1 = nn.Linear(state_size, 128)
-        self.fc2 = nn.Linear(128, 128)
-        self.fc3 = nn.Linear(128, action_size)
+        self.fc1 = nn.Linear(state_size, 64)
+        self.fc2 = nn.Linear(64, 32)
+        self.fc3 = nn.Linear(32, action_size)
 
     def forward(self, x):
         x = torch.relu(self.fc1(x))
@@ -52,13 +53,14 @@ class DQN(nn.Module):
 
 class DQNAgent:
     def __init__(self, state_size, action_size):
+        self.tau = TAU
         self.policy_net = DQN(state_size, action_size)
         self.target_net = DQN(state_size, action_size)
         self.target_net.load_state_dict(self.policy_net.state_dict())
         self.target_net.eval()
         self.optimizer = optim.Adam(self.policy_net.parameters(), lr=LR)
         self.memory = deque(maxlen=MEMORY_SIZE)
-        self.epsilon = EPSILON_START
+        self.epsilon = EPSILON_START #EPSILON_START ou FIXED_EPSILON
         self.action_size = action_size
 
     def select_action(self, state):
@@ -90,10 +92,14 @@ class DQNAgent:
         self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()
-        self.epsilon = max(EPSILON_END, self.epsilon * EPSILON_DECAY)
+        self.epsilon = max(EPSILON_END, self.epsilon * EPSILON_DECAY) #max(EPSILON_END, self.epsilon * EPSILON_DECAY) ou FIXED_EPSILON
 
     def update_target(self):
-        self.target_net.load_state_dict(self.policy_net.state_dict())
+        for target_param, policy_param in zip(self.target_net.parameters(),
+                                            self.policy_net.parameters()):
+            target_param.data.copy_(
+                self.tau * policy_param.data + (1.0 - self.tau) * target_param.data
+            )
 
 
 #gráficos
@@ -115,7 +121,7 @@ ax2.set_ylabel("Recompensa Média")
 ax2.grid(True)
 line2, = ax2.plot([], [], 'r-', linewidth=2)
 
-def update_graphs(rewards, rewards_media, window=10):
+def atualiza_graficos(rewards, rewards_media, window=10):
 
     arr = np.array(rewards)
     m_arr = np.array(rewards_media)
@@ -219,17 +225,13 @@ if __name__ == "__main__":
         rewards_media_movel.append(rewards_acumuladas/(ep + 1))
         print(f"Episódio {ep+1}/{NUM_EPISODES} | Recompensa: {total_r}")
 
-        update_graphs(rewards_all, rewards_media_movel, window=10) #atualizar os graficos
+        atualiza_graficos(rewards_all, rewards_media_movel, window=10) #atualizar os graficos
 
     env.close()
 
     #salvar gráficos
     fig1.savefig("grafico_recompensa_total.png")
     fig2.savefig("grafico_media_movel.png")
-
-    print("\nGráficos salvos como:")
-    print(" → grafico_recompensa_total.png")
-    print(" → grafico_media_movel.png")
 
     plt.ioff()
     plt.show()
