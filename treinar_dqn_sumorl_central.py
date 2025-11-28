@@ -22,7 +22,7 @@ BATCH_SIZE = 64
 TARGET_UPDATE = 20
 DELTA_TIME = 30  # passos de simulação do SUMO
 TAU = 0.01
-FIXED_EPSILON = 0.2
+FIXED_EPSILON = 0.3
 #recompensa
 def minha_recompensa(env):
     tls = env.sumo.trafficlight.getIDList()[0]

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-11-17 00:50:10 by Eclipse SUMO netedit Version 1.18.0
+<!-- generated on 2025-11-28 15:32:45 by Eclipse SUMO netedit Version 1.18.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
@@ -306,7 +306,7 @@
         <phase duration="30" state="GGGrrrrrGGGrrrrr"/>
         <phase duration="3"  state="yyyrrrrryyyrrrrr"/>
         <phase duration="30" state="GrrGGrrrGrrGGrrr"/>
-        <phase duration="3"  state="rrryrrrrrrryrrrr"/>
+        <phase duration="3"  state="yrryyrrryrryyrrr"/>
         <phase duration="30" state="GrrrrGGrrrrrGGGr"/>
         <phase duration="3"  state="yrrrryyrrrrryyyr"/>
         <phase duration="30" state="GrrrGrrGGrrrGrrG"/>
