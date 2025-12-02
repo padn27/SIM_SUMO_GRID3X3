@@ -10,6 +10,8 @@ from collections import deque
 import gymnasium as gym
 import sumo_rl
 import matplotlib.pyplot as plt
+import multiprocessing
+import time
 
 #parâmetros rede
 GAMMA = 0.95
@@ -19,10 +21,11 @@ EPSILON_END = 0.01
 EPSILON_DECAY = 0.9995
 MEMORY_SIZE = 20000
 BATCH_SIZE = 64
-TARGET_UPDATE = 20
+TARGET_UPDATE = 10
 DELTA_TIME = 30  # passos de simulação do SUMO
 TAU = 0.01
 FIXED_EPSILON = 0.3
+
 #recompensa
 def minha_recompensa(env):
     tls = env.sumo.trafficlight.getIDList()[0]
@@ -42,9 +45,9 @@ def minha_recompensa(env):
 class DQN(nn.Module):
     def __init__(self, state_size, action_size):
         super().__init__()
-        self.fc1 = nn.Linear(state_size, 64)
-        self.fc2 = nn.Linear(64, 32)
-        self.fc3 = nn.Linear(32, action_size)
+        self.fc1 = nn.Linear(state_size, 128)
+        self.fc2 = nn.Linear(128, 128)
+        self.fc3 = nn.Linear(128, action_size)
 
     def forward(self, x):
         x = torch.relu(self.fc1(x))
@@ -79,10 +82,11 @@ class DQNAgent:
             return
         batch = random.sample(self.memory, BATCH_SIZE)
         states, actions, rewards, next_states, dones = zip(*batch)
-        states = torch.tensor(states, dtype=torch.float32)
+        states = torch.tensor(np.array(states), dtype=torch.float32)
+        
         actions = torch.tensor(actions).unsqueeze(1)
         rewards = torch.tensor(rewards, dtype=torch.float32).unsqueeze(1)
-        next_states = torch.tensor(next_states, dtype=torch.float32)
+        next_states = torch.tensor(np.array(next_states), dtype=torch.float32)
         dones = torch.tensor(dones, dtype=torch.float32).unsqueeze(1)
         q_values = self.policy_net(states).gather(1, actions)
         with torch.no_grad():
@@ -101,68 +105,53 @@ class DQNAgent:
                 self.tau * policy_param.data + (1.0 - self.tau) * target_param.data
             )
 
+#funcao de encapsulamento com o funcionamento de cada agente para multiprocessing
 
-#gráficos
-plt.ion()
+def treinar_agente(agent_id, args):
+    time.sleep(agent_id * 2)
 
-#grafico 1 - cada episodio
-fig1, ax1 = plt.subplots(figsize=(10, 5))
-ax1.set_title("Recompensa Total por Episódio")
-ax1.set_xlabel("Episódio")
-ax1.set_ylabel("Recompensa")
-ax1.grid(True)
-line1, = ax1.plot([], [], 'b-', alpha=0.6)
-
-#grafico 2 - media
-fig2, ax2 = plt.subplots(figsize=(10, 5))
-ax2.set_title("Média Móvel da Recompensa")
-ax2.set_xlabel("Episódio")
-ax2.set_ylabel("Recompensa Média")
-ax2.grid(True)
-line2, = ax2.plot([], [], 'r-', linewidth=2)
-
-def atualiza_graficos(rewards, rewards_media, window=10):
-
-    arr = np.array(rewards)
-    m_arr = np.array(rewards_media)
-
-    #grafico instantanea
-    line1.set_data(range(len(arr)), arr)
-    ax1.set_xlim(0, max(10, len(arr)))
-    ax1.set_ylim(min(arr) - 1, max(arr) + 1)
-    fig1.canvas.draw()
-    fig1.canvas.flush_events()
-
-    #grafico da media
-    line2.set_data(range(len(m_arr)), m_arr)
-    ax2.set_xlim(0, max(10, len(m_arr)))
-    ax2.set_ylim(min(m_arr) - 1, max(m_arr) + 1)
-    fig2.canvas.draw()
-    fig2.canvas.flush_events()
-
-
-
-#main
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--validacao", action="store_true")
-    parser.add_argument("--episodios", type=int, default=100)
-    parser.add_argument("--troca", type=int, default=10)
-    parser.add_argument("--rotasdir", type=str, default="rotas_jtr")
-    parser.add_argument("--net", type=str, default="baseSumo_SA/grid.net.xml")
-    parser.add_argument("--add", type=str, default="baseSumo_SA/grid.add.xml")
-    args = parser.parse_args()
-
-    USE_GUI = args.validacao
+    USE_GUI = args.validacao if agent_id == 0 else False
     NUM_EPISODES = args.episodios
     TROCA = args.troca
     NET_FILE = args.net
     ADD_FILE = args.add
     ROTAS_DIR = args.rotasdir
 
+    #diretorio dos pesos da rede
+    checkpoint_dir = "checkpoints"
+    os.makedirs(checkpoint_dir, exist_ok=True)
+    
+    #diretorio graficos
+    graficos_dir = "Graficos"
+    os.makedirs(graficos_dir, exist_ok=True)
 
+    #graficos
+    fig1, ax1 = plt.subplots(figsize=(10, 5))
+    ax1.set_title(f"Recompensa Total por Episódio (Agente {agent_id})")
+    ax1.set_xlabel("Episódio")
+    ax1.set_ylabel("Recompensa")
+    ax1.grid(True)
+    line1, = ax1.plot([], [], 'b-', alpha=0.6)
 
-    #carregar rotas
+    fig2, ax2 = plt.subplots(figsize=(10, 5))
+    ax2.set_title(f"Média Móvel da Recompensa (Agente {agent_id})")
+    ax2.set_xlabel("Episódio")
+    ax2.set_ylabel("Recompensa Média")
+    ax2.grid(True)
+    line2, = ax2.plot([], [], 'r-', linewidth=2)
+
+    def atualiza_graficos(rewards, rewards_media, window=10):
+        arr = np.array(rewards)
+        m_arr = np.array(rewards_media)
+        
+        line1.set_data(range(len(arr)), arr)
+        ax1.set_xlim(0, max(10, len(arr)))
+        ax1.set_ylim(min(arr) - 1, max(arr) + 1)
+
+        line2.set_data(range(len(m_arr)), m_arr)
+        ax2.set_xlim(0, max(10, len(m_arr)))
+        ax2.set_ylim(min(m_arr) - 1, max(m_arr) + 1)
+
     route_files = sorted([
         os.path.join(ROTAS_DIR, f)
         for f in os.listdir(ROTAS_DIR)
@@ -170,21 +159,24 @@ if __name__ == "__main__":
     ])
     if not route_files:
         raise FileNotFoundError(f"Nenhum arquivo .rou.xml encontrado em {ROTAS_DIR}")
-    print(f"{len(route_files)} rotas encontradas")
+    
+    print(f"[Agente {agent_id}] {len(route_files)} rotas encontradas")
     current_route_idx = 0
 
-    #loop treino
     rewards_all = []
     rewards_media_movel = []
     rewards_acumuladas = 0
+    
+    env = None
+    agent = None
 
     for ep in range(NUM_EPISODES):
-        #trocar rota a cada qtd de episodios definida nos args
         if ep % TROCA == 0:
-            if ep > 0:
+            if env is not None:
                 env.close()
             rota_atual = route_files[current_route_idx]
-            print(f"\n[Episódio {ep}] -> {os.path.basename(rota_atual)}")
+            print(f"\n[Agente {agent_id} | Ep {ep}] -> {os.path.basename(rota_atual)}")
+            
             env = gym.make(
                 "sumo-rl-v0",
                 net_file=NET_FILE,
@@ -192,16 +184,17 @@ if __name__ == "__main__":
                 use_gui=USE_GUI,
                 num_seconds=3600,
                 delta_time=DELTA_TIME,
-                reward_fn=minha_recompensa
+                reward_fn=minha_recompensa,
+                sumo_warnings=False
             )
             current_route_idx = (current_route_idx + 1) % len(route_files)
             obs, info = env.reset()
             state_size = len(obs)
             action_size = env.action_space.n
-            if ep == 0:
+            
+            if agent is None:
                 agent = DQNAgent(state_size, action_size)
 
-        #reset do env a cada conjunto de episodios para trocar arquivo route
         obs, info = env.reset()
         state = np.array(obs, dtype=np.float32)
         done = False
@@ -223,16 +216,73 @@ if __name__ == "__main__":
         rewards_all.append(total_r)
         rewards_acumuladas += total_r
         rewards_media_movel.append(rewards_acumuladas/(ep + 1))
-        print(f"Episódio {ep+1}/{NUM_EPISODES} | Recompensa: {total_r}")
+        print(f"\nAgente {agent_id} Episodio {ep+1}/{NUM_EPISODES} | Recompensa: {total_r:.2f}")
 
-        atualiza_graficos(rewards_all, rewards_media_movel, window=10) #atualizar os graficos
+        #salva os pesos da rede
+        if (ep + 1) % 50 == 0:
+            nome_arquivo = f"{checkpoint_dir}/dqn_agente_{agent_id}_checkpoint.pth"   
+            torch.save(agent.policy_net.state_dict(), nome_arquivo)
+            print(f"\nAgente {agent_id}] Ultima gravação: {ep}")
 
-    env.close()
+        #chama atualizacao dos graficos de cada agente
+        atualiza_graficos(rewards_all, rewards_media_movel, window=10)
 
-    #salvar gráficos
-    fig1.savefig("grafico_recompensa_total.png")
-    fig2.savefig("grafico_media_movel.png")
+        if ep % 10 == 0:
+            fig1.savefig(f"{graficos_dir}/grafico_recompensa_total_agente_{agent_id}.png")
+            fig2.savefig(f"{graficos_dir}/grafico_media_movel_agente_{agent_id}.png")
 
-    plt.ioff()
-    plt.show()
+    if env:
+        env.close()
 
+    # Salva o modelo final também
+    torch.save(agent.policy_net.state_dict(), f"{checkpoint_dir}/dqn_agente_{agent_id}_final.pth")
+
+    fig1.savefig(f"{graficos_dir}/grafico_recompensa_total_agente_{agent_id}.png")
+    fig2.savefig(f"{graficos_dir}/grafico_media_movel_agente_{agent_id}.png")
+    
+    plt.close(fig1)
+    plt.close(fig2)
+    print(f"\nAgente {agent_id} finalizado.")
+
+
+#main
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    #ativa ou nao a GUI - caso paralelo apenas 1 vai ter a GUI
+    parser.add_argument("--validacao", action="store_true")
+    #quantidade de episodios
+    parser.add_argument("--episodios", type=int, default=100)
+    #intervalo de trocas
+    parser.add_argument("--troca", type=int, default=10)
+    #diretorio rotas
+    parser.add_argument("--rotasdir", type=str, default="rotas_jtr")
+    #caminho arquivo .net
+    parser.add_argument("--net", type=str, default="baseSumo_SA/grid.net.xml")
+    #caminho arquivo add
+    parser.add_argument("--add", type=str, default="baseSumo_SA/grid.add.xml")
+    #quantidade de agentes em paralelo
+    parser.add_argument("--agentes", type=int, default=1)
+    args = parser.parse_args()
+    num_agentes = args.agentes
+
+    
+    if num_agentes > 1:
+        print(f"Treinamento paralelo com {num_agentes}")
+        
+        # Criação dos processos
+        processos = []
+        for i in range(num_agentes):
+            p = multiprocessing.Process(target=treinar_agente, args=(i, args))
+            processos.append(p)
+            p.start()
+        
+        #join
+        for p in processos:
+            p.join()
+            
+        print("\nTodos os agentes finalizaram.")
+        
+    else:
+        #chama apenas um treinamento
+        print("\nTreinamento unico")
+        treinar_agente(0, args)
