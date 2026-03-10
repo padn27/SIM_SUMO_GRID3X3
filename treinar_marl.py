@@ -225,7 +225,7 @@ def treinar_agente(agent_id, args):
             actions = {}
             for ts_id in env.agents:
                 if ts_id in args.ts_selecionados:
-                    # AGENTE INTELIGENTE: Rede Neural escolhe a ação
+                    #escolha semaforos agente
                     state = np.array(observations[ts_id], dtype=np.float32)
                     actions[ts_id] = dqn_agents[ts_id].select_action(state)
                 else:
