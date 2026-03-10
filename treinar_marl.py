@@ -18,11 +18,11 @@ GAMMA = 0.95
 LR = 0.001
 EPSILON_START = 1.0
 EPSILON_END = 0.01
-EPSILON_DECAY = 0.95    # Cai 1x por episódio
+EPSILON_DECAY = 0.95    #epsilon decai por episodio
 MEMORY_SIZE = 20000
 BATCH_SIZE = 64
 DELTA_TIME = 30  
-TAU = 0.005             # Soft Update lento e estável
+TAU = 0.005             # soft update
 
 # ts é o semáforo específico sendo avaliado
 def minha_recompensa(ts):
@@ -202,7 +202,7 @@ def treinar_agente(agent_id, args):
             
         observations, infos = env.reset()
         
-        # Inicializa as Redes Neurais APENAS para os selecionados no JSON
+        #agentes e redes para os semaforos definidos no JSON
         if not dqn_agents:
             for i, ts_id in enumerate(args.ts_selecionados):
                 state_size = env.observation_space(ts_id).shape[0]
@@ -229,14 +229,14 @@ def treinar_agente(agent_id, args):
                     state = np.array(observations[ts_id], dtype=np.float32)
                     actions[ts_id] = dqn_agents[ts_id].select_action(state)
                 else:
-                    # AGENTE BURRO (Heurístico): Alterna a fase a cada step (Cria um farol de tempo fixo)
+                    # farol de tempo fisico que altera a cada passo de "aprendizado" (sem agente inicializado)
                     num_phases = env.action_space(ts_id).n
                     actions[ts_id] = step_count % num_phases
             
             next_observations, rewards, terminations, truncations, infos = env.step(actions)
             
             for ts_id in env.agents:
-                # O Aprendizado (Memória e Loss) só acontece para as IAs
+                #remember replay e target somente para agentes
                 if ts_id in args.ts_selecionados:
                     state = np.array(observations[ts_id], dtype=np.float32)
                     next_state = np.array(next_observations[ts_id], dtype=np.float32)
@@ -253,11 +253,11 @@ def treinar_agente(agent_id, args):
             observations = next_observations
             step_count += 1
 
-        # Fim do episódio: Atualiza Epsilon apenas das IAs
+        #atualizaçao decaimento
         for ts_id in dqn_agents:
             dqn_agents[ts_id].epsilon = max(EPSILON_END, dqn_agents[ts_id].epsilon * EPSILON_DECAY)
 
-        # Computa gráficos apenas para as IAs
+        #graficos
         for ts_id in args.ts_selecionados:
             r_ep = recompensa_ep_agentes[ts_id]
             historico_recompensas[ts_id].append(r_ep)
