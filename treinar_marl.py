@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import multiprocessing
 import time
 import json
+import csv
 
 # Parâmetros rede
 GAMMA = 0.95
@@ -19,7 +20,7 @@ LR = 0.001
 FIXED_EPSILON = 0.3
 EPSILON_START = 1.0
 EPSILON_END = 0.01
-EPSILON_DECAY = 0.9    #epsilon decai por episodio
+EPSILON_DECAY = 0.95    #epsilon decai por episodio
 MEMORY_SIZE = 20000
 BATCH_SIZE = 64
 DELTA_TIME = 30  
@@ -131,6 +132,17 @@ def treinar_agente(agent_id, args):
     graficos_dir = "Graficos_marl"
     os.makedirs(graficos_dir, exist_ok=True)
 
+    dados_csv_dir = "DadosCSV"
+    perfil_dir = os.path.join(dados_csv_dir, args.perfil)
+    os.makedirs(perfil_dir, exist_ok=True)
+
+    #criacao csv dados - brutos por episodio
+    caminho_csv = os.path.join(perfil_dir, f"metricas_marl_proc_{agent_id}.csv")
+    with open(caminho_csv, mode='w', newline='') as f:
+        writer = csv.writer(f)
+        #cabecalho
+        writer.writerow(["episodio", "semaforo", "tipo", "reward_total", "delay_total", "espera_total", "fila_total", "throughput_total", "co2_total"])
+
     fig1, ax1 = plt.subplots(figsize=(12, 6))
     ax1.set_title(f"Recompensa por Episódio - MARL (Processo {agent_id})")
     ax1.set_xlabel("Episódio")
@@ -205,7 +217,7 @@ def treinar_agente(agent_id, args):
             if dqn_agents: 
                 print("\ntroca de rota - reset epsilon ciclico")
                 for ts_id in dqn_agents:
-                    dqn_agents[ts_id].epsilon = 0.3
+                    dqn_agents[ts_id].epsilon = 0.15
 
         observations, infos = env.reset()
         
@@ -227,23 +239,61 @@ def treinar_agente(agent_id, args):
 
         recompensa_ep_agentes = {ts_id: 0.0 for ts_id in args.ts_selecionados}
         step_count = 0
+        
+        #vetor de soma das metricas para cada semaforo ao longo dos steps de um mesmo episodio
+        # =======================================================
+        # ACUMULADOR DE TOTAIS DO EPISÓDIO
+        # =======================================================
+        metricas_ep = {}
 
         while env.agents:
             actions = {}
             for ts_id in env.agents:
                 if ts_id in args.ts_selecionados:
-                    #escolha semaforos agente
                     state = np.array(observations[ts_id], dtype=np.float32)
                     actions[ts_id] = dqn_agents[ts_id].select_action(state)
                 else:
-                    # farol de tempo fisico que altera a cada passo de "aprendizado" (sem agente inicializado)
                     num_phases = env.action_space(ts_id).n
                     actions[ts_id] = step_count % num_phases
             
             next_observations, rewards, terminations, truncations, infos = env.step(actions)
             
+            #acumulacao a cada step
             for ts_id in env.agents:
-                #remember replay e target somente para agentes
+                if ts_id not in metricas_ep:
+                    metricas_ep[ts_id] = {'fila_sum': 0.0, 'co2_sum': 0.0, 'espera_sum': 0.0, 'delay_sum': 0.0, 'throughput': 0}
+
+                base_sumo_env = env.unwrapped.env if hasattr(env.unwrapped, 'env') else env.unwrapped
+                ts_obj = base_sumo_env.traffic_signals[ts_id]
+                lanes_ts = ts_obj.lanes
+                
+                #soma instantanea co2 e fila
+                fila_step = sum(ts_obj.sumo.lane.getLastStepHaltingNumber(l) for l in lanes_ts)
+                co2_step = sum(ts_obj.sumo.lane.getCO2Emission(l) for l in lanes_ts)
+                
+                veiculos_step = []
+                for l in lanes_ts:
+                    veiculos_step.extend(ts_obj.sumo.lane.getLastStepVehicleIDs(l))
+                
+                #soma tempo de espera e delay
+                if not veiculos_step:
+                    espera_total_step = 0.0
+                    delay_total_step = 0.0
+                else:
+                    espera_total_step = sum(ts_obj.sumo.vehicle.getWaitingTime(v) for v in veiculos_step)
+                    delay_total_step = sum(ts_obj.sumo.vehicle.getTimeLoss(v) for v in veiculos_step)
+                
+                # throughput (Contamos a quantidade de carros "vistos" neste step nas ruas do semaforo)
+                metricas_ep[ts_id]['throughput'] += len(veiculos_step)
+                
+                #acumula no episodio
+                metricas_ep[ts_id]['fila_sum'] += fila_step
+                metricas_ep[ts_id]['co2_sum'] += co2_step
+                metricas_ep[ts_id]['espera_sum'] += espera_total_step
+                metricas_ep[ts_id]['delay_sum'] += delay_total_step
+
+            
+            for ts_id in env.agents:
                 if ts_id in args.ts_selecionados:
                     state = np.array(observations[ts_id], dtype=np.float32)
                     next_state = np.array(next_observations[ts_id], dtype=np.float32)
@@ -259,6 +309,25 @@ def treinar_agente(agent_id, args):
             
             observations = next_observations
             step_count += 1
+
+        #salvar no csv apos episodio
+        buffer_csv = []
+        for ts_id, dados in metricas_ep.items():
+            tipo_agente = "RL" if ts_id in args.ts_selecionados else "Fixo"
+            reward_total = recompensa_ep_agentes.get(ts_id, 0.0) 
+            
+            # Sem divisão! Pegamos a soma direta que foi acumulada
+            fila_total_ep = dados['fila_sum']
+            espera_total_ep = dados['espera_sum']
+            delay_total_ep = dados['delay_sum']
+            co2_total_ep = dados['co2_sum'] 
+            throughput_total = dados['throughput']
+            
+            buffer_csv.append([ep, ts_id, tipo_agente, reward_total, delay_total_ep, espera_total_ep, fila_total_ep, throughput_total, co2_total_ep])
+            
+        with open(caminho_csv, mode='a', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerows(buffer_csv)
 
         #atualizaçao decaimento, comentar p/ decaimento fixo ou alterar para FIXED_EPSILON
         for ts_id in dqn_agents:
