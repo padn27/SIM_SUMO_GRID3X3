@@ -16,9 +16,10 @@ import json
 # Parâmetros rede
 GAMMA = 0.95
 LR = 0.001
+FIXED_EPSILON = 0.3
 EPSILON_START = 1.0
 EPSILON_END = 0.01
-EPSILON_DECAY = 0.95    #epsilon decai por episodio
+EPSILON_DECAY = 0.9    #epsilon decai por episodio
 MEMORY_SIZE = 20000
 BATCH_SIZE = 64
 DELTA_TIME = 30  
@@ -26,13 +27,13 @@ TAU = 0.005             # soft update
 
 # ts é o semáforo específico sendo avaliado
 def minha_recompensa(ts):
-    alpha = 1.0     # peso para o tempo médio de espera
+    alpha = 0.8     # peso para o tempo médio de espera
     beta = 1.0      # peso para o comprimento da fila
-    gamma = 0.0001  # peso para emissão de CO2
+    gamma = 0.005  # peso para emissão de CO2
 
     lanes = ts.lanes
     
-    #tempo medio de espera
+    #tempo medio de espera W
     all_vehicles = []
     for l in lanes:
         all_vehicles.extend(ts.sumo.lane.getLastStepVehicleIDs(l))
@@ -43,10 +44,10 @@ def minha_recompensa(ts):
         total_wait = sum(ts.sumo.vehicle.getWaitingTime(vid) for vid in all_vehicles)
         W = total_wait / len(all_vehicles)
 
-    #comprimento total das filas
+    #comprimento total das filas Q
     Q = sum(ts.sumo.lane.getLastStepHaltingNumber(l) for l in lanes)
 
-    #emissao de CO2
+    #emissao de CO2 E
     E = sum(ts.sumo.lane.getCO2Emission(l) for l in lanes)
 
     #retorno recompensa total
@@ -77,7 +78,7 @@ class DQNAgent:
         self.target_net.eval()
         self.optimizer = optim.Adam(self.policy_net.parameters(), lr=LR)
         self.memory = deque(maxlen=MEMORY_SIZE)
-        self.epsilon = EPSILON_START
+        self.epsilon = EPSILON_START #ou FIXED_EPSILON, comentar tambem decaimento na linha 256 ou trocar para FIXED_EPSILON - 10/03
         self.action_size = action_size
 
     def select_action(self, state):
@@ -200,6 +201,12 @@ def treinar_agente(agent_id, args):
             )
             current_route_idx = (current_route_idx + 1) % len(route_files)
             
+            #epsilon ciclico, na troca de rota ele é aumentado para que a exploração nunca acabe devido a grande quantidade de episodios
+            if dqn_agents: 
+                print("\ntroca de rota - reset epsilon ciclico")
+                for ts_id in dqn_agents:
+                    dqn_agents[ts_id].epsilon = 0.3
+
         observations, infos = env.reset()
         
         #agentes e redes para os semaforos definidos no JSON
@@ -253,9 +260,9 @@ def treinar_agente(agent_id, args):
             observations = next_observations
             step_count += 1
 
-        #atualizaçao decaimento
+        #atualizaçao decaimento, comentar p/ decaimento fixo ou alterar para FIXED_EPSILON
         for ts_id in dqn_agents:
-            dqn_agents[ts_id].epsilon = max(EPSILON_END, dqn_agents[ts_id].epsilon * EPSILON_DECAY)
+            dqn_agents[ts_id].epsilon = max(EPSILON_END, dqn_agents[ts_id].epsilon * EPSILON_DECAY) #ou FIXED_EPSILON
 
         #graficos
         for ts_id in args.ts_selecionados:
