@@ -8,13 +8,14 @@ import torch.optim as optim
 import random
 from collections import deque
 from sumo_rl import parallel_env 
-from sumo_rl.environment.observations import ObservationFunction
-from gymnasium import spaces
+#from sumo_rl.environment.observations import ObservationFunction
+#from gymnasium import spaces
 import matplotlib.pyplot as plt
 import multiprocessing
 import time
 import json
 import csv
+#from xml.etree import ElementTree as ET
 
 # Parâmetros rede
 GAMMA = 0.95
@@ -29,145 +30,159 @@ DELTA_TIME = 30
 TAU = 0.005             # soft update
 
 
-class ObservacaoVizinhos(ObservationFunction):
-    def __init__(self, ts):
-        super().__init__(ts)
-        
-        # Mapeamento estático para a topologia 3x3
-        self.mapa_vizinhos = {
-            'n00': ['n01', 'n10'],
-            'n01': ['n00', 'n02', 'n11'],
-            'n02': ['n01', 'n12'],
-            'n10': ['n00', 'n11', 'n20'],
-            'n11': ['n01', 'n10', 'n12', 'n21'],
-            'n12': ['n02', 'n11', 'n22'],
-            'n20': ['n10', 'n21'],
-            'n21': ['n20', 'n11', 'n22'],
-            'n22': ['n21', 'n12']
-        }
-        self.vizinhos_ids = self.mapa_vizinhos.get(self.ts.id, [])
+#MAPA_VIZINHOS = {}
 
-    def __call__(self):
+
+#def gerar_mapa_vizinhos_por_net(net_file):
+    #tree = ET.parse(net_file)
+    #root = tree.getroot()
+
+    #semaforos definidos no arquivo de rede
+    #tls_ids = {tl.get("id") for tl in root.findall("tlLogic") if tl.get("id")}
+
+    #caso nao encontre tlLogic, tenta buscar pelas junctions
+    #if not tls_ids:
+        #tls_ids = {
+            #j.get("id")
+            #for j in root.findall("junction")
+            #if j.get("type") == "traffic_light" and j.get("id")
+        #}
+
+    #mapa = {tls_id: set() for tls_id in tls_ids}
+
+    #vizinhos sao semaforos ligados diretamente por uma aresta externa
+    #for edge in root.findall("edge"):
+        #edge_id = edge.get("id", "")
+
+        #if edge_id.startswith(":"):
+            #continue
+
+        #origem = edge.get("from")
+        #destino = edge.get("to")
+
+        #if origem in tls_ids and destino in tls_ids:
+            #mapa[origem].add(destino)
+            #mapa[destino].add(origem)
+
+    #return {ts_id: sorted(vizinhos) for ts_id, vizinhos in mapa.items()}
+
+
+#class ObservacaoVizinhos(ObservationFunction):
+    #def __init__(self, ts):
+        #super().__init__(ts)
+        
+        #mapeamento gerado automaticamente pela rede passada no treino
+        #self.vizinhos_ids = MAPA_VIZINHOS.get(self.ts.id, [])
+
+    #def __call__(self):
  
-        phase_id = [1 if self.ts.green_phase == i else 0 for i in range(self.ts.num_green_phases)]
-        min_green = [0 if self.ts.time_since_last_phase_change < self.ts.min_green + self.ts.yellow_time else 1]
+        #phase_id = [1 if self.ts.green_phase == i else 0 for i in range(self.ts.num_green_phases)]
+        #min_green = [0 if self.ts.time_since_last_phase_change < self.ts.min_green + self.ts.yellow_time else 1]
         
-        densidade_local = self.ts.get_lanes_density()
-        fila_local = self.ts.get_lanes_queue()
+        #densidade_local = self.ts.get_lanes_density()
+        #fila_local = self.ts.get_lanes_queue()
         
-        obs_local = phase_id + min_green + densidade_local + fila_local
+        #obs_local = phase_id + min_green + densidade_local + fila_local
         
-        obs_vizinhos = []
+        #obs_vizinhos = []
 
-        todos_ts = self.ts.env.traffic_signals 
+        #todos_ts = self.ts.env.traffic_signals 
         
-        for vizinho_id in self.vizinhos_ids:
-            if vizinho_id in todos_ts:
-                ts_vizinho = todos_ts[vizinho_id]
-                obs_vizinhos.extend(ts_vizinho.get_lanes_density())
-                obs_vizinhos.extend(ts_vizinho.get_lanes_queue())
+        #for vizinho_id in self.vizinhos_ids:
+            #if vizinho_id in todos_ts:
+                #ts_vizinho = todos_ts[vizinho_id]
+                #obs_vizinhos.extend(ts_vizinho.get_lanes_density())
+                #obs_vizinhos.extend(ts_vizinho.get_lanes_queue())
         
-        return np.array(obs_local + obs_vizinhos, dtype=np.float32)
+        #return np.array(obs_local + obs_vizinhos, dtype=np.float32)
 
-    def observation_space(self):
+    #def observation_space(self):
 
-        tamanho_local = self.ts.num_green_phases + 1 + 2 * len(self.ts.lanes)
+        #tamanho_local = self.ts.num_green_phases + 1 + 2 * len(self.ts.lanes)
         
 
-        tamanho_vizinhos = 0
+        #tamanho_vizinhos = 0
         
-        for vizinho_id in self.vizinhos_ids:
+        #for vizinho_id in self.vizinhos_ids:
             
-            lanes_vizinho = list(dict.fromkeys(self.ts.sumo.trafficlight.getControlledLanes(vizinho_id)))
+            #lanes_vizinho = list(dict.fromkeys(self.ts.sumo.trafficlight.getControlledLanes(vizinho_id)))
         
-            tamanho_vizinhos += 2 * len(lanes_vizinho)
+            #tamanho_vizinhos += 2 * len(lanes_vizinho)
                 
-        tamanho_total = tamanho_local + tamanho_vizinhos
+        #tamanho_total = tamanho_local + tamanho_vizinhos
         
-        return spaces.Box(
-            low=0.0, 
-            high=1.0, 
-            shape=(tamanho_total,), 
-            dtype=np.float32
-        )
+        #return spaces.Box(
+            #low=0.0, 
+            #high=1.0, 
+            #shape=(tamanho_total,), 
+            #dtype=np.float32
+        #)
 
-def minha_recompensa_vizinhos(ts):
-    alpha = 0.8     # peso para o tempo médio de espera
-    beta = 1.0      # peso para o comprimento da fila
-    gamma = 0.005   # peso para emissão de CO2
-    fator_coop = 0.2 # 20% do foco na dor dos vizinhos
+#def minha_recompensa_vizinhos(ts):
+    #alpha = 0.8     # peso para o tempo médio de espera
+    #beta = 1      # peso para o comprimento da fila
+    #gamma = 0.005   # peso para emissão de CO2
+    #fator_coop = 0.3 # 30% do foco na "dor" dos vizinhos
 
     #recompensa local - SEPARAR DEPOIS PARA FACILITAR
-    lanes_local = ts.lanes
-    all_vehicles_local = []
-    for l in lanes_local:
-        all_vehicles_local.extend(ts.sumo.lane.getLastStepVehicleIDs(l))
+    #lanes_local = ts.lanes
+    #all_vehicles_local = []
+    #for l in lanes_local:
+     #   all_vehicles_local.extend(ts.sumo.lane.getLastStepVehicleIDs(l))
 
-    if not all_vehicles_local:
-        W_local = 0.0
-    else:
-        total_wait_local = sum(ts.sumo.vehicle.getWaitingTime(vid) for vid in all_vehicles_local)
-        W_local = total_wait_local / len(all_vehicles_local)
+    #if not all_vehicles_local:
+     #   W_local = 0.0
+    #else:
+     #   total_wait_local = sum(ts.sumo.vehicle.getWaitingTime(vid) for vid in all_vehicles_local)
+      #  W_local = total_wait_local / len(all_vehicles_local)
 
-    Q_local = sum(ts.sumo.lane.getLastStepHaltingNumber(l) for l in lanes_local)
-    E_local = sum(ts.sumo.lane.getCO2Emission(l) for l in lanes_local)
+    #Q_local = sum(ts.sumo.lane.getLastStepHaltingNumber(l) for l in lanes_local)
+    #E_local = sum(ts.sumo.lane.getCO2Emission(l) for l in lanes_local)
     
-    recompensa_local = -(alpha * W_local + beta * Q_local + gamma * E_local)
+    #recompensa_local = -(alpha * W_local + beta * Q_local + gamma * E_local)
 
     #calculo vizinhos
-    mapa_vizinhos = {
-        'n00': ['n01', 'n10'],
-        'n01': ['n00', 'n02', 'n11'],
-        'n02': ['n01', 'n12'],
-        'n10': ['n00', 'n11', 'n20'],
-        'n11': ['n01', 'n10', 'n12', 'n21'],
-        'n12': ['n02', 'n11', 'n22'],
-        'n20': ['n10', 'n21'],
-        'n21': ['n20', 'n11', 'n22'],
-        'n22': ['n21', 'n12']
-    }
-    
-    vizinhos_ids = mapa_vizinhos.get(ts.id, [])
-    todos_ts = ts.env.traffic_signals
-    recompensas_viz = []
+    #vizinhos_ids = MAPA_VIZINHOS.get(ts.id, [])
+    #todos_ts = ts.env.traffic_signals
+    #recompensas_viz = []
 
-    for v_id in vizinhos_ids:
-        if v_id in todos_ts:
-            ts_viz = todos_ts[v_id]
-            lanes_viz = ts_viz.lanes
+    #for v_id in vizinhos_ids:
+        #if v_id in todos_ts:
+            #ts_viz = todos_ts[v_id]
+            #lanes_viz = ts_viz.lanes
             
-            all_vehicles_viz = []
-            for l in lanes_viz:
-                all_vehicles_viz.extend(ts_viz.sumo.lane.getLastStepVehicleIDs(l))
+            #all_vehicles_viz = []
+            #for l in lanes_viz:
+                #all_vehicles_viz.extend(ts_viz.sumo.lane.getLastStepVehicleIDs(l))
 
-            if not all_vehicles_viz:
-                W_viz = 0.0
-            else:
-                total_wait_viz = sum(ts_viz.sumo.vehicle.getWaitingTime(vid) for vid in all_vehicles_viz)
-                W_viz = total_wait_viz / len(all_vehicles_viz)
+            #if not all_vehicles_viz:
+                #W_viz = 0.0
+            #else:
+                #total_wait_viz = sum(ts_viz.sumo.vehicle.getWaitingTime(vid) for vid in all_vehicles_viz)
+                #W_viz = total_wait_viz / len(all_vehicles_viz)
 
-            Q_viz = sum(ts_viz.sumo.lane.getLastStepHaltingNumber(l) for l in lanes_viz)
-            E_viz = sum(ts_viz.sumo.lane.getCO2Emission(l) for l in lanes_viz)
+            #Q_viz = sum(ts_viz.sumo.lane.getLastStepHaltingNumber(l) for l in lanes_viz)
+            #E_viz = sum(ts_viz.sumo.lane.getCO2Emission(l) for l in lanes_viz)
             
             #penalidade de cada vizinho
-            r_viz = -(alpha * W_viz + beta * Q_viz + gamma * E_viz)
-            recompensas_viz.append(r_viz)
+            #r_viz = -(alpha * W_viz + beta * Q_viz + gamma * E_viz)
+            #recompensas_viz.append(r_viz)
 
     #agrega a recompensa
-    if recompensas_viz:
-        media_vizinhos = sum(recompensas_viz) / len(recompensas_viz)
-    else:
-        media_vizinhos = 0.0
+    #if recompensas_viz:
+        #media_vizinhos = sum(recompensas_viz) / len(recompensas_viz)
+    #else:
+        #media_vizinhos = 0.0
         
-    reward_final = (1.0 - fator_coop) * recompensa_local + (fator_coop * media_vizinhos)
+    #reward_final = (1.0 - fator_coop) * recompensa_local + (fator_coop * media_vizinhos)
 
-    return float(reward_final)
+    #return float(reward_final)
 
 
 # ts é o semáforo específico sendo avaliado
 def minha_recompensa(ts):
     alpha = 0.8     # peso para o tempo médio de espera
-    beta = 1.0      # peso para o comprimento da fila
+    beta = 1     # peso para o comprimento da fila
     gamma = 0.005  # peso para emissão de CO2
 
     lanes = ts.lanes
@@ -255,6 +270,12 @@ class DQNAgent:
         for target_param, policy_param in zip(self.target_net.parameters(), self.policy_net.parameters()):
             target_param.data.copy_(self.tau * policy_param.data + (1.0 - self.tau) * target_param.data)
 
+def get_veiculos_lanes(ts_obj):
+    veiculos = set()
+    for l in ts_obj.lanes:
+        veiculos.update(ts_obj.sumo.lane.getLastStepVehicleIDs(l))
+    return veiculos
+
 # Treinamento
 def treinar_agente(agent_id, args):
     time.sleep(agent_id * 2)
@@ -264,6 +285,13 @@ def treinar_agente(agent_id, args):
     TROCA = args.troca
     NET_FILE = args.net
     ROTAS_DIR = args.rotasdir
+
+    #global MAPA_VIZINHOS
+    #MAPA_VIZINHOS = gerar_mapa_vizinhos_por_net(NET_FILE)
+
+    #print("\nMapa de vizinhos carregado:")
+    #for ts_id, vizinhos in MAPA_VIZINHOS.items():
+    #print(f"  {ts_id}: {vizinhos}")
 
     checkpoint_dir = "checkpoints"
     os.makedirs(checkpoint_dir, exist_ok=True)
@@ -346,8 +374,9 @@ def treinar_agente(agent_id, args):
                 use_gui=USE_GUI,
                 num_seconds=3600,
                 delta_time=DELTA_TIME,
-                reward_fn=minha_recompensa_vizinhos, #minha_recompensa,
-                observation_class=ObservacaoVizinhos, #deletar para espaço de observações local
+                #reward_fn=minha_recompensa_vizinhos
+                reward_fn=minha_recompensa,
+                #observation_class=ObservacaoVizinhos,
                 sumo_warnings=False
             )
             current_route_idx = (current_route_idx + 1) % len(route_files)
@@ -359,13 +388,14 @@ def treinar_agente(agent_id, args):
                     dqn_agents[ts_id].epsilon = 0.15
 
         observations, infos = env.reset()
-        
+
         #agentes e redes para os semaforos definidos no JSON
         if not dqn_agents:
             for i, ts_id in enumerate(args.ts_selecionados):
                 state_size = env.observation_space(ts_id).shape[0]
                 action_size = env.action_space(ts_id).n
-                print(f"Semáforo: {ts_id} | Tamanho do Vetor de Observação: {state_size}") #comentar depois, apenas debug
+                print(f"Semáforo: {ts_id} | Tamanho do Vetor de Observação: {state_size}")
+                #print(f"Semáforo: {ts_id} | Vizinhos: {MAPA_VIZINHOS.get(ts_id, [])} | Tamanho do Vetor de Observação: {state_size}") #comentar depois, apenas debug
                 dqn_agents[ts_id] = DQNAgent(state_size, action_size)
                 
                 cor = cores_grafico[i % len(cores_grafico)]
@@ -385,6 +415,14 @@ def treinar_agente(agent_id, args):
         # ACUMULADOR DE TOTAIS DO EPISÓDIO
         # =======================================================
         metricas_ep = {}
+
+        base_sumo_env = env.unwrapped.env if hasattr(env.unwrapped, 'env') else env.unwrapped
+        veiculos_anteriores = {}
+        veiculos_contados = {}
+
+        for ts_id, ts_obj in base_sumo_env.traffic_signals.items():
+            veiculos_anteriores[ts_id] = get_veiculos_lanes(ts_obj)
+            veiculos_contados[ts_id] = set()
 
         while env.agents:
             actions = {}
@@ -411,15 +449,27 @@ def treinar_agente(agent_id, args):
                 fila_step = sum(ts_obj.sumo.lane.getLastStepHaltingNumber(l) for l in lanes_ts)
                 co2_step = sum(ts_obj.sumo.lane.getCO2Emission(l) for l in lanes_ts)
                 
-                veiculos_step = []
-                for l in lanes_ts:
-                    veiculos_step.extend(ts_obj.sumo.lane.getLastStepVehicleIDs(l))
+                veiculos_step = get_veiculos_lanes(ts_obj)
                 
                 # soma tempo de espera e delay
+                espera_total_step = 0.0
+                delay_total_step = 0.0
                 if veiculos_step:
                     espera_total_step = sum(ts_obj.sumo.vehicle.getWaitingTime(v) for v in veiculos_step)
-                    # Usa getAccumulatedWaitingTime que é a prova de falhas na sua versão do SUMO
+                    # Usa getAccumulatedWaitingTime - versão sumo permite essa para delay
                     delay_total_step = sum(ts_obj.sumo.vehicle.getAccumulatedWaitingTime(v) for v in veiculos_step)
+
+                #veiculos que sairam das lanes de entrada do semaforo
+                veiculos_passaram = veiculos_anteriores.get(ts_id, set()) - veiculos_step
+
+                #evita contar o mesmo veiculo mais de uma vez no mesmo semaforo
+                veiculos_passaram = veiculos_passaram - veiculos_contados.get(ts_id, set())
+
+                metricas_ep[ts_id]['throughput'] += len(veiculos_passaram)
+                veiculos_contados[ts_id].update(veiculos_passaram)
+
+                #atualiza memoria para o proximo step
+                veiculos_anteriores[ts_id] = veiculos_step
                 
                 #acumula no episodio
                 metricas_ep[ts_id]['fila_sum'] += fila_step
@@ -451,7 +501,7 @@ def treinar_agente(agent_id, args):
             tipo_agente = "RL" if ts_id in args.ts_selecionados else "Fixo"
             reward_total = recompensa_ep_agentes.get(ts_id, 0.0) 
             
-            # Sem divisão! Pegamos a soma direta que foi acumulada
+            #soma direta
             fila_total_ep = dados['fila_sum']
             espera_total_ep = dados['espera_sum']
             delay_total_ep = dados['delay_sum']
@@ -477,9 +527,8 @@ def treinar_agente(agent_id, args):
             media_atual = recompensas_acumuladas[ts_id] / (ep + 1)
             historico_media_movel[ts_id].append(media_atual)
 
-        recompensas_outros = {t: round(v, 2) for t, v in recompensa_ep_agentes.items() if t != 'n11'}
-        print(f"Proc {agent_id} Ep {ep+1}/{NUM_EPISODES} | Rec. Central (n11): {recompensa_ep_agentes.get('n11', 0):.2f}")
-        print(f"Proc {agent_id} Ep {ep+1}/{NUM_EPISODES} | Rec. Outros: {recompensas_outros}")
+        recompensas_print = {t: round(v, 2) for t, v in recompensa_ep_agentes.items()}
+        print(f"Proc {agent_id} Ep {ep+1}/{NUM_EPISODES} | Rec. Agentes RL: {recompensas_print}")
 
         if (ep + 1) % 50 == 0:
             for ts_id, agent in dqn_agents.items():
@@ -513,11 +562,15 @@ if __name__ == "__main__":
     parser.add_argument("--rotasdir", type=str, default="rotas_jtr_marl") 
     parser.add_argument("--net", type=str, default="baseSumo/grid.net.xml")
     parser.add_argument("--agentes", type=int, default=1, help="Quantidade de simulações em paralelo")
-    parser.add_argument("--perfil", type=str, default="perfil_cruz", help="Qual perfil do JSON usar")
+    parser.add_argument("--perfil", type=str, default="parcial", help="Qual perfil do JSON usar")
+    parser.add_argument("--perfis", type=str, default="perfis_treinamento_marl_4x3.json", help="Arquivo JSON com perfis de semáforos")
     args = parser.parse_args()
     
-    with open("perfis_treinamento_marl_3x3.json", "r") as f:
+    with open(args.perfis, "r") as f:
         perfis = json.load(f)
+    
+    if args.perfil not in perfis:
+        raise ValueError(f"Perfil '{args.perfil}' não existe em {args.perfis}. Perfis disponíveis: {list(perfis.keys())}")
     
     args.ts_selecionados = perfis[args.perfil]
 
@@ -530,3 +583,4 @@ if __name__ == "__main__":
     else:
         print(f"Iniciando treinamento único (Perfil: {args.perfil})...")
         treinar_agente(0, args)
+
